@@ -26,10 +26,10 @@ function maketheTheme(mode) {
     localStorage.setItem("dark-mode-storage", mode);
     if (mode === "dark") {
         darkTheme.disabled = false;
-        changeicon.className="fas fa-sun";
+        changeicon.className="fas fa-sun fa-2x";
     } else if (mode === "light") {
         darkTheme.disabled = true;
-        changeicon.className="fas fa-moon";
+        changeicon.className="fas fa-moon fa-2x";
 
     }
 }
