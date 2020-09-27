@@ -11,17 +11,15 @@ categories = ["automation","electronics","mechanical"]
 
 Robots were invented with the goal of helping humans carry out their tasks more comfortably, particularly 4D (Dirty, Dangerous, Difficult, and Dull) tasks. In designing robots, the conventional approach has been to design their hardware and software in accordance with the tasks they are supposed to do. Conventional robots can perform specific tasks accurately, but they are not very versatile and adaptive, and thus applications that are consigned to them rely heavily on their physical structure and controller capabilities. As a workaround to flexibility and adaptability limitations of fixed-body robots, Modular Self Reconfigurable Robots were introduced.
 
-![smores](/blog/img/mssr/pic2.png)
-
-<center>(SMORES by GRASP Lab at Penn Engineering)</center>
+<!--Smores image-->
+{{< figure src="/blog/img/mssr/pic2.png" caption="SMORES by GRASP Lab at Penn Engineering">}}
 
 Modular robotics provides a unique advantage over traditional robotic technologies in terms of reconfigurability, reusability, and ease in manufacturing. Many applications such as large-scale facility management, space exploration, military-zone monitoring, disaster management, and prosthetics for physically disabled  need adaptable and self-healing capabilities, and modular self reconfigurable robots are often seen as a feasible solution to the same. The major difference of modular system designs over conventional robots can be viewed as the ability to form various configurations as per the requirement of application with minimal human intervention.
 
 A modular robot consists of several units with few degrees of freedom (DOFs) called modules which are usually equipped with connection mechanisms to cooperatively connect to or detach from each other in order to create complex structures and configurations with many DOFs. Modular robots are usually classified into chain-type, lattice-type or hybrid-type architectures depending on module arrangement.
 
-![m-tran](/blog/img/mssr/pic3.png)
-
-<center>(M-TRAN by AIST and Tokyo Tech)</center>
+<!--M-tran image-->
+{{< figure src="/blog/img/mssr/pic3.png" caption="M-TRAN by AIST and Tokyo Tech">}}
 
 Chain-type architectures consist of modules that are connected together in a linear or tree topology. This structure can fold-up to become space filling, but the underlying architecture is serial. These modular robots  are able to autonomously change their configuration into a wheel, quadruped, snake, worm, and so on. Some examples of chain-type modular robots are Polybot, [iMOBOT](https://www.youtube.com/watch?v=6qxx7K17L_8), Transmote, Ubot, [CoSMO](https://www.youtube.com/watch?v=uhNEuXQK1iI) and many more.
 
@@ -29,15 +27,13 @@ Lattice-type robot has modules that are arranged in a regular three-dimensional 
 
 Hybrid-type architectures have features of both lattice-type and chain-type architectures. Some modular robots can be classified as hybrid-type because they can be configured both as chain and as lattice structures. [M-TRAN](https://www.youtube.com/watch?v=4oSavAHf0dg&t=2s), [Superbot](https://www.youtube.com/watch?v=rfT0hbewv-4), [SMORES](https://www.youtube.com/watch?v=CfKErvU3we8), and [Roombots](https://www.youtube.com/watch?v=KY6QCDUngtk) are examples of hybrid-type modular robots.
 
-![atron](/blog/img/mssr/pic4.png)
-
-<center>(Atron by Adaptronics group)</center>
+<!--Atron image-->
+{{< figure src="/blog/img/mssr/pic4.png" caption="Atron by Adaptronics group">}}
 
 ERC, BITS Goa’s, Modbot project, focused on developing a new design for a modular robot that had sufficient degrees of freedom to be able to perform a large number of configurations. The project aimed at developing a lightweight, manufacturable network of modules able to overcome functional limitations faced by existing modular self reconfigurable robots. A single module was fabricated capable of complete teleoperation. A custom circuit on a prototyping board was manufactured to overcome difficulties in connections and properly interfacing the micro-controller with peripherals. The team also performed torque analysis for gears and linkages in a simulation environment. In Feb 2020, the team began the process of improvising the mechanical model in order to overcome the space constraints to fit in the IR modules (TCRT5000). The future prospects of the project includes migrating the whole project onto ROS and preparing a custom stack for the project.
 
-![modbot](/blog/img/mssr/pic5.jpg)
-
-<center>(Modbot by ERC, BITS Goa)</center>
+<!--Modbot image-->
+{{< figure src="/blog/img/mssr/pic5.jpg" caption="Modbot by ERC, BITS Goa">}}
 
 A modular robot also contains a lot of electronics on a single module aside from all the mechanical structure discussed here. These range from actuation motors to sensors for perception of the environment and computer processors which can handle all remote computation. To be fully self reconfigurable these robots need to be autonomous and complete various tasks with minimal or no human interference. This requires precise control algorithms, motion and path planning and even the application of machine learning in some stages.
 
