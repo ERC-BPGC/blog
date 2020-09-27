@@ -4,9 +4,7 @@
   is an official part of the theme (ex. Pull Requests) should be included in main.css
   and follow the formatting and style given.
 */
-html {
-  background-color: #171717 !important;
-}
+
 html {
   filter: invert(100%) hue-rotate(180deg) brightness(105%) contrast(85%);
   -webkit-filter: invert(100%) hue-rotate(180deg) brightness(105%) contrast(85%);
