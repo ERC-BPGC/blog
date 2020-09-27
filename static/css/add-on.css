@@ -6,6 +6,7 @@
 */
 html {
   background-color: #171717 !important;
+  overflow-x: hidden !important; 
 }
 html {
   filter: invert(100%) hue-rotate(180deg) brightness(105%) contrast(85%);
@@ -13,6 +14,7 @@ html {
 }
 body {
   background: #FFF !important;
+  overflow-x: auto !important;
 }
 img,
 video,
