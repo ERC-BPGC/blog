@@ -11,7 +11,7 @@ categories = ["automation","electronics","mechanical"]
 
 Robots were invented with the goal of helping humans carry out their tasks more comfortably, particularly 4D (Dirty, Dangerous, Difficult, and Dull) tasks. In designing robots, the conventional approach has been to design their hardware and software in accordance with the tasks they are supposed to do. Conventional robots can perform specific tasks accurately, but they are not very versatile and adaptive, and thus applications that are consigned to them rely heavily on their physical structure and controller capabilities. As a workaround to flexibility and adaptability limitations of fixed-body robots, Modular Self Reconfigurable Robots were introduced.
 
-![smores](img/mssr/pic2.png){: style="align=centre"}
+![smores](/blog/img/mssr/pic2.png)
 
 <center>(SMORES by GRASP Lab at Penn Engineering)</center>
 
@@ -19,7 +19,7 @@ Modular robotics provides a unique advantage over traditional robotic technologi
 
 A modular robot consists of several units with few degrees of freedom (DOFs) called modules which are usually equipped with connection mechanisms to cooperatively connect to or detach from each other in order to create complex structures and configurations with many DOFs. Modular robots are usually classified into chain-type, lattice-type or hybrid-type architectures depending on module arrangement.
 
-![m-tran](img/mssr/pic3.png){: style="align=centre"}
+![m-tran](/blog/img/mssr/pic3.png)
 
 <center>(M-TRAN by AIST and Tokyo Tech)</center>
 
@@ -29,13 +29,13 @@ Lattice-type robot has modules that are arranged in a regular three-dimensional 
 
 Hybrid-type architectures have features of both lattice-type and chain-type architectures. Some modular robots can be classified as hybrid-type because they can be configured both as chain and as lattice structures. [M-TRAN](https://www.youtube.com/watch?v=4oSavAHf0dg&t=2s), [Superbot](https://www.youtube.com/watch?v=rfT0hbewv-4), [SMORES](https://www.youtube.com/watch?v=CfKErvU3we8), and [Roombots](https://www.youtube.com/watch?v=KY6QCDUngtk) are examples of hybrid-type modular robots.
 
-![atron](img/mssr/pic4.png){: style="align=centre"}
+![atron](/blog/img/mssr/pic4.png)
 
 <center>(Atron by Adaptronics group)</center>
 
 ERC, BITS Goa’s, Modbot project, focused on developing a new design for a modular robot that had sufficient degrees of freedom to be able to perform a large number of configurations. The project aimed at developing a lightweight, manufacturable network of modules able to overcome functional limitations faced by existing modular self reconfigurable robots. A single module was fabricated capable of complete teleoperation. A custom circuit on a prototyping board was manufactured to overcome difficulties in connections and properly interfacing the micro-controller with peripherals. The team also performed torque analysis for gears and linkages in a simulation environment. In Feb 2020, the team began the process of improvising the mechanical model in order to overcome the space constraints to fit in the IR modules (TCRT5000). The future prospects of the project includes migrating the whole project onto ROS and preparing a custom stack for the project.
 
-![modbot](img/mssr/pic5.jpg){: style="align=centre"}
+![modbot](/blog/img/mssr/pic5.jpg)
 
 <center>(Modbot by ERC, BITS Goa)</center>
 
