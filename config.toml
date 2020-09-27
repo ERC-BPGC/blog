@@ -50,7 +50,7 @@ publishDir				= "docs"
   [params.intro]
     header                = "the erc blog"
     paragraph             = "By the Electronics and Robotics Club"
-    rssIntro              = true
+    rssIntro              = false
     socialIntro           = true
     hideWhenSingleColumn  = false
     alwaysOnHomepage      = false
@@ -68,7 +68,7 @@ publishDir				= "docs"
     categoriesByCount   = true
 
   [params.footer]
-    rssFooter           = true
+    rssFooter           = false
     socialFooter        = true
 
   [params.staticman]
@@ -88,7 +88,7 @@ publishDir				= "docs"
   [[menu.main]]
     name              = "Home"
     identifier        = "home"
-    url               = "/"
+    url               = "../blog"
     pre               = "<i class='fa fa-home'></i>"
     weight            = 1
 
