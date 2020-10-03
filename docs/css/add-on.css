@@ -5,6 +5,12 @@
   and follow the formatting and style given.
 */
 
+@-moz-document url-prefix() {
+  html {
+      background-color: #171717;
+  }
+}
+
 html {
   filter: invert(100%) hue-rotate(180deg) brightness(105%) contrast(85%);
   -webkit-filter: invert(100%) hue-rotate(180deg) brightness(105%) contrast(85%);
