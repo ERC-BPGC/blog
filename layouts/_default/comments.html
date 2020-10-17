@@ -9,6 +9,7 @@
     {{/* $entryId stores the transformed current path for sorting Staticman data file */}}
     {{- $entryId := .File.UniqueID -}}
     {{/* Additional div wrapper for proper consistent margin */}}
+    <!--
     <div>
       <h2 id="say-something">{{ i18n "say_something" }}</h2>
         <form id="comment-form" class="new-comment" method="POST">
@@ -50,8 +51,10 @@
           <input type='reset' value='{{ i18n "reset" }}' class='button'>
         </form>
     </div>
+    -->
 
     {{/* Additional div wrapper for proper consistent margin */}}
+    <!--
     <div>
       <h2>{{ i18n "comments" }}</h2>
 
@@ -82,8 +85,8 @@
                             <time datetime="{{ .date }}">{{ dateFormat "02 Jan 06 15:04" .date }}</time>
                           </a>
                         </div>
-                        <!-- TODO: Assess Value (ref ln#73): <a href='#{{ .replyID }}' class='reply-target'>{{ .replyName }}</a> -->
-                        <!-- TODO: Assess Value: <span class ="comment-threadID hidden">{{ .replyThread }}</span> -->
+                         TODO: Assess Value (ref ln#73): <a href='#{{ .replyID }}' class='reply-target'>{{ .replyName }}</a> 
+                         TODO: Assess Value: <span class ="comment-threadID hidden">{{ .replyThread }}</span> 
                         <a class="comment-reply-btn" href="#say-something">{{ i18n "reply" }}</a>
                       </div>
                     </header>
@@ -98,5 +101,6 @@
         {{ end }}
       {{ end }}
     </div>
+  -->
   </article>
 {{ end }}
