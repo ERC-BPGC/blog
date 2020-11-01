@@ -3,10 +3,8 @@ title = "About"
 layout = "about"
 +++
 
-The Electronics and Robotics Club (ERC) of BITS Goa is a diverse group of students with interests ranging from electronics to machine learning to mechanical design. Founded in 2008, it is one of the oldest clubs on campus and has evolved into a platform to learn and experiment with various aspects of science and engineering and to apply them in robotics.
+The Electronics and Robotics Club (ERC) of BITS Goa is a diverse group of students with interests ranging from electronics to machine learning to mechanical design. Over the years, we have evolved into a platform to learn and experiment with various aspects of science and engineering and to apply them in robotics.
 
-This Club is a great place not only for electronics engineers but also mechanical enthusiasts and dynamic coders. We are organised into multiple teams working on a wide range of projects including hardware design, open source libraries and even full robots from scratch!  Members are also encouraged to exchange experiences and expertise and we hold weekly discussion sessions, demonstrations and presentations for exactly that.
-
-Over the years, the Club has shifted its focus from competing in robotics competitions to taking on more research oriented projects and problem statements with real world applications. With robotics being a rapidly changing field, we strive to keep up with the latest developments in both research and industry while also learning about various subfields in detail. Apart from this, we frequently work on exhibition projects to display during the annual technical fest on the campus and other events throughout the year.
+The club includes people who are passionate about the latest technologies and engineering techniques.  This blog is an attempt to share their experience with others in specific fields and also to give people a glimpse of trending areas in robotics research. The posts are written by members with a particular interest in the relevant subject matter and may even correspond to a project that the club has worked upon.
 
 We are open to anyone with a general interest in engineering and who wants to explore robotics, so feel free to get in touch with us.
