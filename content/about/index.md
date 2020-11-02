@@ -9,4 +9,4 @@ The club includes people who are passionate about the latest technologies and en
 
 We are open to anyone with a general interest in engineering and who wants to explore robotics, so feel free to get in touch with us.
 
-To know more about us visit our website, and for learning resources to get started on robotics check out our handbook
+To know more about us visit our <a href = "https://erc-bpgc.github.io/" target = "blank">website</a>, and for learning resources to get started on robotics check out our <a href ="https://erc-bpgc.github.io/handbook/" target = "blank">handbook</a>
