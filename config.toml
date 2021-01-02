@@ -34,7 +34,7 @@ publishDir				= "docs"
   [params.meta]
     description         = "Blog for the Electronics and Robotics Club of BITS Goa."
     author              = "ERC"
-    favicon             = false
+    favicon             = true
     svg                 = true
     faviconVersion      = "1"
     msColor             = "#ffffff"
