@@ -2,6 +2,7 @@
 title = "Robotic Arms: A Brief"
 description = "This article gives a brief history of Robotic Arms and discusses their different types and various uses."
 author = "Sanskar Jain"
+author_link = "https://in.linkedin.com/in/sanskar-jain-8098831a6"
 date = "2021-01-03"
 categories = ["mechanical","innovation","industry"]
 [[images]]

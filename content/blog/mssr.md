@@ -2,6 +2,7 @@
 title = "Modular Self Reconfigurable Robots"
 description = "The article discusses the idea of Modular Self Reconfigurable Robots, and how they boost robots' utility in various sectors."
 author = "Ashutosh Gupta"
+author_link = "https://in.linkedin.com/in/ashutosh-gupta781"
 date = "2020-09-27"
 categories = ["automation","electronics","mechanical"]
 [[images]]

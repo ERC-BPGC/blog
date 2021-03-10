@@ -11,8 +11,9 @@
     {{ end }}
   </div>
   <div class="meta">
+    {{ with .Params.author_link }}<a href="{{ . }}" target="blank">{{ end }}
+    {{ with .Params.author }}<p style="font-size:14px;">{{ . }} <i class="fas fa-id-badge"style="font-size:14px;"></i></p></a>{{ end }}
     <time datetime="{{ .Date }}">{{ .Render "date" }}</time>
-    {{ with .Params.author }}<p>{{ . }}</p>{{ end }}
     {{ if .Site.Params.ReadingTime }}<p>{{ i18n "reading_time" .ReadingTime }}</p>{{ end }}
     <!--{{ .Render "stats" }}-->
   </div>
