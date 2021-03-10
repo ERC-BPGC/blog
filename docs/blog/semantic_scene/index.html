@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+<title>Semantic Scene Understanding in Robotics - The ERC Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/apple-touch-icon.png?v=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/favicon-32x32.png?v=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/favicon-16x16.png?v=1">
+  <link rel="manifest" href="/blog/site.webmanifest?v=1">
+  
+    <link rel="mask-icon" href="/blog/safari-pinned-tab.svg?v=1" color="#ffffff">
+    <link rel="shortcut icon" href="/blog/favicon.ico?v=1">
+    <meta name="msapplication-config" content="/blog/browserconfig.xml?v=1">
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+<meta name="generator" content="Hugo 0.75.1" /><meta itemprop="name" content="Semantic Scene Understanding in Robotics">
+<meta itemprop="description" content="An article on why semantic scene understanding could be the next big thing in autonomous robotics, where we are now, and what comes next">
+<meta itemprop="datePublished" content="2021-03-09T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-03-09T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1574">
+<meta itemprop="image" content="">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta property="og:title" content="Semantic Scene Understanding in Robotics" />
+<meta property="og:description" content="An article on why semantic scene understanding could be the next big thing in autonomous robotics, where we are now, and what comes next" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://erc-bpgc.github.io/blog/blog/semantic_scene/" />
+<meta property="og:image" content="" />
+<meta property="article:published_time" content="2021-03-09T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-03-09T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content=""/>
+
+<meta name="twitter:title" content="Semantic Scene Understanding in Robotics"/>
+<meta name="twitter:description" content="An article on why semantic scene understanding could be the next big thing in autonomous robotics, where we are now, and what comes next"/>
+<meta name="twitter:site" content="@erc_bpgc?s=12"/>
+<link rel="stylesheet" href="/blog/css/bundle.min.d9e04ae08c9b3049b766dbd4aeab7d862c5ea1d13679b621490e0f5df5507497.css" integrity="sha256-2eBK4IybMEm3ZtvUrqt9hixeodE2ebYhSQ4PXfVQdJc="><link disabled=true id="dark-mode-theme" rel="stylesheet" href="/blog/css/add-on.css">
+        <link rel="stylesheet" href="/blog/css/add-on1.css">
+  </head>
+
+  <body>
+    
+
+<header id="site-header" style="box-shadow:none !important;background-color: #f2f2f2 !important;">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/blog/" >> the erc blog <img class="cursorgif" src="/blog/img/cursor.gif">
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu menu">
+      
+        
+          
+          <a href="/blog" class="nav link"><i class='fa fa-home'></i> Home</a>
+        
+      
+        
+          
+          <a href="/blog/about/" class="nav link"><i class='far fa-id-card'></i> About</a>
+        
+      
+        
+          
+          <a href="/blog/categories/" class="nav link"><i class='fas fa-sitemap'></i> Categories</a>
+        
+      
+      <a href="#share-menu" class="nav link share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      <a href="#search-input" class="nav link search-toggle"><i class="fas fa-search">&nbsp;</i>Search</a>
+    </menu>
+    <div class="theme-switch-wrapper">
+      <label class="theme-switch" for="dark-mode-toggle" style="height: 44px; padding-left: 1rem;">
+          <input type="checkbox" id="dark-mode-toggle" /><i id="theme-icon" class="fas fa-moon"></i>
+          
+    </label>
+    
+  </div>
+  
+    <a href="#search-input" class="nav search-toggle"><i class="fas fa-search fa-2x">&nbsp;</i></a>
+    <a href="#share-menu" class="nav share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    
+    <a href="#site-nav" class="nav nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  <menu id="search" class="menu"><input id="search-input" class="search-input menu"></input><div id="search-results" class="search-results menu"></div></menu>
+  
+  
+    <menu id="share-menu" class="flyout-menu menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Semantic%20Scene%20Understanding%20in%20Robotics&amp;url=https%3a%2f%2ferc-bpgc.github.io%2fblog%2fblog%2fsemantic_scene%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <p>Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ferc-bpgc.github.io%2fblog%2fblog%2fsemantic_scene%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <p>Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2ferc-bpgc.github.io%2fblog%2fblog%2fsemantic_scene%2f&amp;title=Semantic%20Scene%20Understanding%20in%20Robotics" target="_blank" rel="noopener" class="nav share-btn reddit">
+          <p>Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2ferc-bpgc.github.io%2fblog%2fblog%2fsemantic_scene%2f&amp;title=Semantic%20Scene%20Understanding%20in%20Robotics" target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <p>LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2ferc-bpgc.github.io%2fblog%2fblog%2fsemantic_scene%2f&amp;description=Semantic%20Scene%20Understanding%20in%20Robotics" target="_blank" rel="noopener" class="nav share-btn pinterest">
+          <p>Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=Check%20out%20this%20post%20by Rishikesh%20Vanarse&amp;body=https%3a%2f%2ferc-bpgc.github.io%2fblog%2fblog%2fsemantic_scene%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <p>Email</p>
+        </a>
+  
+
+
+    </menu>
+  
+</header>
+
+    <div id="wrapper">
+      <section id="site-intro" >
+  <a href="/blog/"><img src="https://erc-bpgc.github.io/blog/img/main/logo.png" class="circle" width="100" alt="Hugo Future Imperfect Slim" /></a>
+  <header>
+    <h1>the erc blog</h1>
+  </header>
+  <main>
+    <p>By the Electronics and Robotics Club</p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+        <li><a href="//twitter.com/erc_bpgc?s=12" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+<li><a href="//facebook.com/ElectronicsAndRoboticsClub" target="_blank" rel="noopener" title="Facebook" class="fab fa-facebook"></a></li>
+<li><a href="//github.com/ERC-BPGC" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+<li><a href="//instagram.com/erc_bitsgoa/" target="_blank" rel="noopener" title="Instagram" class="fab fa-instagram"></a></li>
+<li><a href="//linkedin.com/company/electronics-robotics-club-bits-goa/" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </ul>
+    </footer>
+  
+</section>
+
+      <main id="site-main">
+        
+  <article class="post">
+    <header>
+  <div class="title">
+    
+      <h2 style="font-size:1.5em !important; font-family:Arial, Helvetica, sans-serif !important; text-transform: capitalize !important; letter-spacing:3px !important ;"><a href="/blog/blog/semantic_scene/">Semantic Scene Understanding in Robotics</a></h2>
+    
+    
+      <p>An article on why semantic scene understanding could be the next big thing in autonomous robotics, where we are now, and what comes next</p>
+    
+  </div>
+  <div class="meta">
+    <time datetime="2021-03-09 00:00:00 &#43;0000 UTC">March 9, 2021</time>
+    <p>Rishikesh Vanarse</p>
+    <p>8-Minute Read</p>
+    
+  </div>
+</header>
+
+    <div id="socnet-share">
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Semantic%20Scene%20Understanding%20in%20Robotics&amp;url=https%3a%2f%2ferc-bpgc.github.io%2fblog%2fblog%2fsemantic_scene%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <p>Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ferc-bpgc.github.io%2fblog%2fblog%2fsemantic_scene%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <p>Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2ferc-bpgc.github.io%2fblog%2fblog%2fsemantic_scene%2f&amp;title=Semantic%20Scene%20Understanding%20in%20Robotics" target="_blank" rel="noopener" class="nav share-btn reddit">
+          <p>Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2ferc-bpgc.github.io%2fblog%2fblog%2fsemantic_scene%2f&amp;title=Semantic%20Scene%20Understanding%20in%20Robotics" target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <p>LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2ferc-bpgc.github.io%2fblog%2fblog%2fsemantic_scene%2f&amp;description=Semantic%20Scene%20Understanding%20in%20Robotics" target="_blank" rel="noopener" class="nav share-btn pinterest">
+          <p>Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=Check%20out%20this%20post%20by Rishikesh%20Vanarse&amp;body=https%3a%2f%2ferc-bpgc.github.io%2fblog%2fblog%2fsemantic_scene%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <p>Email</p>
+        </a>
+  
+
+
+    </div>
+    <div class="content">
+      <a href="/blog/blog/semantic_scene/" class="image" style="--bg-image: url('https://erc-bpgc.github.io/blog/img/semantic_scene/semantic_slam.png');">
+    <img class="stretchV" src="https://erc-bpgc.github.io/blog/img/semantic_scene/semantic_slam.png" alt="">
+  </a>
+      <!---
+NOTES TO MEDIA TEAM:
+* Add author social media links [Also website now :)  https://rmvanarse.github.io ]
+-->
+<p>I accidentally dropped my keys this morning. They fell and slid down right under the bed. I got down, making sure not to knock anything over, and tried to reach them, but they seemed out of reach. I instinctively looked around to see if I could use anything to reach the keys, and saw an unused guitar-stand nearby. It took me 4-5 seconds to dismantle the stand, and use its rod to retrieve my keys. This whole &lsquo;side-quest&rsquo; barely cost me 25 seconds.</p>
+<p>Being a human being, retrieving a key from under a bed is a task that is too insignificant for us to ponder over. We overcome multiple such hinderances daily, without realizing their complexity. For today&rsquo;s robots (even the most advanced ones), this very task would be extremely complex. Why is that so?</p>
+<p>Robotic arms and grippers of our age possess amazing dexterity and recent robots have overcome some of the hardest challenges in control. With advanced sensors, processors and algorithms, tasks such as localization &amp; motion planning are more efficient than ever before. Developments in AI have made real-time object detection and tracking possible. Yet, tasks such as the one mentioned above still seem near-impossible due to a simple unanswered question: How would a robot <strong>figure out</strong> what to do in such unplanned situations?</p>
+<p>Despite employing  state-of-the-art neural networks, robots do not possess a <strong><em>true understanding</em></strong> of the <strong>semantics</strong> of their environment, i.e. the <strong><em>meaning</em></strong> of the things around them. Robots do not  know how every object in their surroundings can influence their goal. Complex robot use cases (eg: disaster management and search &amp; rescue operations) that require robots to predict possible scenarios and anticipate consequences of their actions. But they are unable to correlate knowledge from different domains with what they perceive and therefore, cannot draw logical conclusions about what can/should be done. Thus, the large gap between perception and panning is that of <strong><em>reasoning</em></strong> or <strong><em>common sense</em></strong>.</p>
+<h2 id="semantic-slam">Semantic SLAM</h2>
+<p>One of the relatively more explored sub-fields of semantic scene understanding is <strong>semantic <a href="https://in.mathworks.com/discovery/slam.html">SLAM</a></strong> (Simultaneous Localization and Mapping). Most techniques in semantic SLAM simply augment a map with semantic information. In earlier works, keypoints extracted within object detection bounding boxes are used to introduce physical constraints during SLAM. Knowledge of recognized objects can be used to introduce <strong>semantic priors</strong> (eg: A tree should be vertically oriented, the trunk should always touch the ground). Many approaches also predict 3D structures that are not fully visible, by using known shapes of common objects. This helps the robot predict occluded structures and  free-spaces. Recent approaches go further by taking into account factors such as the movability, flexibility, allowed degrees of freedom and expected behaviour of known objects. Applications of these are commonly seen in self-driving cars. Here, objects like road signs, cars, signals, etc. are tracked, and known behaviours of vehicles, pedestrians, etc. are used for making predictions.</p>
+<hr>
+<!--Tesla & Desk-->
+<figure>
+    <img src="/blog/img/semantic_scene/semantic_slam.png"
+         alt="Semantic SLAM - How Tesla Autopilot sees the world (left) and augmenting SLAM with object information (right)"/> <figcaption>
+            <p><strong>Semantic SLAM</strong> - How Tesla Autopilot sees the world (left) and augmenting SLAM with object information (right)</p>
+        </figcaption>
+</figure>
+
+<p>Inclusion of  properties of <em>individual</em> objects in SLAM is not sufficient. For a true semantic understanding, the robot must also understand how multiple entities interact with one another. This implies that the perceived data must be further augmented with <em>context</em> and <em>reasoning</em>.</p>
+<h2 id="ontology-and-logic">Ontology and Logic</h2>
+<p>For robots to make sense of the inter-relations of objects, our knowledge of these objects needs to be arranged in some form of <strong>conceptual hierarchy</strong>. A common approach towards this is using <strong>conceptual maps</strong>. These maps are an abstraction of the environment in terms of a graph. In some approaches, nodes represent physical area-labels (room, corridor) and  their transition points (doors, gates). Other approaches further cluster objects based on which node they are associated with (eg: An oven is associated with a kitchen). Often, Machine Learning is used for this classification, i.e. associating places &amp; objects to each other, through context. The maps are sometimes endowed with additional semantic constraints such as connectivity, movability, transition feasibility, etc.</p>
+<p>Moving beyond simply <em>recognizing</em> context, robots also need to know how to <em>use</em> this context. An interesting way to tackle this is through the use of <strong>description sections</strong>. These are sections in the robot&rsquo;s memory that would contain rules for logical inference, Bayesian predictions, heuristics, etc. There also exist algorithms that convert <a href="https://en.wikipedia.org/wiki/Linear_temporal_logic">linear &amp; temporal logic</a> from these descriptive rules to controllers that can directly be used on robots.</p>
+<p>Another effective way to introduce logical reasoning in robots is by storing knowledge in an <strong>ontological structure</strong>. This is a graph that provides the robot information about <em>what the objects are, what they can be used for</em> and <em>how to use them</em> (See the figure below). Thus, by taking into account the semantics of objects, the robot can  choose appropriate behaviour based on the current situation.</p>
+<!--Ontology cup, kettle-->
+<figure>
+    <img src="/blog/img/semantic_scene/ontology.png"
+         alt="Ontological structures - Cropped diagram of a robot figuring out how to find a cup of tea"/> <figcaption>
+            <p><strong>Ontological structures</strong> - Cropped diagram of a robot figuring out how to find a cup of tea</p>
+        </figcaption>
+</figure>
+
+<h2 id="learning-to-reason">Learning to Reason</h2>
+<p>Hardcoding logical rules still has its limitations. Human understanding is beyond a fixed set of pre-fed rules. Humans can <em>observe</em> their surroundings and instantly <em>understand</em> what is going on through  <em>common sense</em>. Humans can corelate past observations to gain a better understanding of the current situation.</p>
+<p>One area where machines  are getting better at gaining such an understanding is not in robotics, but in artificial <strong><a href="https://towardsdatascience.com/image-captioning-in-deep-learning-9cd23fb4d8d2">video/image captioning</a></strong> networks. The figure below shows an AI answering questions about an image. Such architectures generally consist of a CNN-based (Convolutional Neural Network) model for object recognition giving a feature vector. This feature vector is fed to an RNN (Recurrent Neural Network) that generates a sentence describing it. It would thus be a fair assumption that at an intermediate step of this process contains a significant level of semantic understanding, embedded in latent space.</p>
+<p>The second area of learning through observation is <strong>imitation learning</strong>. There exists research in this area that tries to solve the <strong>correspondence problem</strong>; i.e.: Humans and robots perceive and interact with the world in fundamentally different ways, so robots must <em>learn</em> the correspondence between the &lsquo;state spaces&rsquo; of humans and robots. This consists of establishing <strong>Perceptual equivalence</strong> (<em>What does an observation mean in robot-terms &amp; human-terms</em>) and <strong>physical equivalence</strong> <em>(How to achieve the same effect as the one observed)</em>.</p>
+<!--waiter pancakes-->
+<figure>
+    <img src="/blog/img/semantic_scene/captioning.png"/> 
+</figure>
+
+<h2 id="general-intelligence--artificial-conscience">General Intelligence &amp; Artificial Conscience</h2>
+<p>Despite all these advances, there is still a very long way to go. As we build systems with growing semantic understanding, we gradually approach towards <strong>Artificial General Intelligence (AGI)</strong>. AGI can be defined as the <em>ability of a machine to perform any task that a human can</em>. Contemporary state-of-the-art systems are still designed to perform well on very specific tasks, but not so much on anything else. An AGI on the other hand should be able to learn a broader range of tasks with far less training. An AGI would ideally be able to apply knowledge of one domain to another.</p>
+<p>An <strong>AGI singularity** is defined as the point in the future when Artificial Intelligence surpasses human level thinking. Based on current trends of advancement in the field, some experts believe that the singularity may arrive as early as the year 2060. As each development in robotics and AI brings us closer to this point, we are moving slowly from &lsquo;Autonomous Robots&rsquo; to </strong>&lsquo;Cognitive Robots&rsquo;**<a href="https://en.wikipedia.org/wiki/Cognitive_robotics"></a> - robots that possess awareness, memory (episodic &amp; procedural), ability to learn and the ability to anticipate. At such a point, AI may have the ability to figure out solutions to some of the worlds biggest and most complex challenges, and robots may be able to implement these solutions with far more ease and efficiency than humans. This would be a point when a simple task like figuring out how to retrieve keys from under a bed would truly be as insignificant for robots as it is for humans. But until then, there still remains much research to be done.</p>
+<br>
+<br>
+<h2 id="references">References</h2>
+<ol>
+<li>R.Salas, N.Newcombe, H.Strasdat, P.Kelly, A.Davidson; SLAM++: Simultaneous localization and mapping at the level of Objects; <em>CVPR 2013</em></li>
+<li>I.Kostavelis, A.Gasteratos; Semantic Mapping for Mobile Robot Tasks - A survey; <em>Robotics &amp; Autonomous Systems</em> S66 (2015) pp86-103</li>
+<li><a href="https://www.carscoops.com/2020/01/this-is-what-teslas-autopilot-sees-on-the-road/">This is what a Tesla Autopilot sees on Road</a> (Carscoop Article by S.Tudose)</li>
+<li>R. Zellers, Y.Bisk, A.Farhadi, Y.Choi: From Recognition to Cognition - Visual Common Sense Reasoning; <em>CVPR 2019</em></li>
+<li>A. Pronobis, P. Jensfelt, Understanding the real world: Combining objects, appearance, geometry and topology for semantic mapping.</li>
+<li>G.Lim; Ontology based unified robot knoowledge for Service Robots in Indoor Environment; <em>IEEE transactions on Systems, Man &amp; Cybernetics</em> Part A. Vol 41. No 3, May 2011</li>
+<li>C. Galindo, A. Saffiotti, S. Coradeschi, P. Buschka, J.-A. Fernandez-Madrigal, J. González:  Multi-hierarchical semantic maps for mobile robotics, <em>International Conference on Intelligent Robots and Systems</em>, IEEE, 2005, pp. 2278–2283</li>
+<li>O.M. Mozos, W. Burgard, Supervised learning of topological maps using se- mantic information extracted from range data; <em>International Conference on Intelligent Robots and Systems</em>, IEEE, 2006, pp. 2772–2777</li>
+<li>B. Kuipers, Modeling spatial knowledge, Cogn. Sci. 2 (2) (1978) 129–153.</li>
+<li><a href="https://medium.com/swlh/automatic-image-captioning-using-deep-learning-5e899c127387">Automatic Image Cationing using Deep Learning</a> (Medium Article)</li>
+<li>J. Browniee, 2017 <a href="https://machinelearningmastery.com/how-to-caption-photos-with-deep-learning/">How to Automatically Generate Textual Descriptions for a Photograph with DL</a></li>
+<li>S. Wadhwa, 2018 <a href="https://blog.floydhub.com/asking-questions-to-images-with-deep-learning/">Asking Questions to Images with Deep Learning</a> (Floydhub Article)</li>
+<li>M. Tenorth, L. Kunze, D. Jain, M. Beetz, Knowrob-map-knowledge-linked semantic object maps; <em>International Conference on Humanoid Robots</em>, IEEE, 2010, pp. 430–435</li>
+<li>L.Nicholson, M.Milford, N.Sünderhauf; QuadricSLAM: Dual Quadrics from Object Detections as Landmarks in Object-oriented SLAM</li>
+<li><a href="http://www.scholarpedia.org/article/Robot_learning_by_demonstration">Robot Learning by Demonstration</a> (Scholarpedia)</li>
+<li><a href="https://www.forbes.com/sites/cognitiveworld/2019/06/10/how-far-are-we-from-achieving-artificial-general-intelligence/?sh=578c9faa6dc4">How Far are we from achieving Artificial General Intelligence?</a> (Forbes Article)</li>
+<li><a href="https://research.aimultiple.com/artificial-general-intelligence-singularity-timing/">995 experts opinion: AGI singularity by 2060</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Cognitive_robotics">Cognitive Robotcs</a> (Wikipedia)</li>
+</ol>
+
+    </div>
+    <footer>
+      <div class="stats">
+  
+    <ul class="categories" style="font-size:medium; max-width:100% !important;">
+      
+        
+          <li><a class="article-terms-link" href="/blog/categories/innovation/">innovation</a></li>
+        
+          <li><a class="article-terms-link" href="/blog/categories/ai/">ai</a></li>
+        
+          <li><a class="article-terms-link" href="/blog/categories/computer-vision/">computer vision</a></li>
+        
+      
+    </ul>
+  
+  
+    
+  
+</div>
+
+    </footer>
+  </article>
+  
+    
+  <article class="post">
+    
+    
+
+    
+    
+  </article>
+
+
+  
+  <div class="pagination">
+    
+    
+      <a href="/blog/blog/robotic_arms/" class="button right"><span>Robotic Arms: A Brief</span></a>
+    
+  </div>
+
+      </main>
+      <section id="site-sidebar">
+  
+    
+  
+
+  
+    
+      <section id="categories">
+        <header>
+          <h1><a href="/blog/categories">categories</a></h1>
+        </header>
+        <ul>
+          
+          
+          <li>
+              <a href="/blog/categories/innovation/">innovation<span class="count">2</span></a>
+          
+          <li>
+              <a href="/blog/categories/mechanical/">mechanical<span class="count">2</span></a>
+          
+          <li>
+              <a href="/blog/categories/ai/">ai<span class="count">1</span></a>
+          
+          <li>
+              <a href="/blog/categories/automation/">automation<span class="count">1</span></a>
+          
+          <li>
+              <a href="/blog/categories/computer-vision/">computer-vision<span class="count">1</span></a>
+          
+          <li>
+              <a href="/blog/categories/electronics/">electronics<span class="count">1</span></a>
+          
+          <li>
+              <a href="/blog/categories/industry/">industry<span class="count">1</span></a>
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+
+  
+    
+  
+</section>
+
+      <footer id="site-footer">
+  
+      <ul class="socnet-icons">
+        
+        <li><a href="//twitter.com/erc_bpgc?s=12" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+<li><a href="//facebook.com/ElectronicsAndRoboticsClub" target="_blank" rel="noopener" title="Facebook" class="fab fa-facebook"></a></li>
+<li><a href="//github.com/ERC-BPGC" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+<li><a href="//instagram.com/erc_bitsgoa/" target="_blank" rel="noopener" title="Instagram" class="fab fa-instagram"></a></li>
+<li><a href="//linkedin.com/company/electronics-robotics-club-bits-goa/" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </ul>
+  
+  <p class="copyright">
+    © 2021 The ERC Blog
+      <br>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.75.1' target='_blank' rel='noopener'>Hugo</a>
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      <script src="/blog/js/highlight.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script><script src="/blog/js/bundle.min.91795bce3029963d71f84e74f8a83d48ab2cdf260e3db7ecf63d3294c95674c7.js" integrity="sha256-kXlbzjAplj1x&#43;E50&#43;Kg9SKss3yYOPbfs9j0ylMlWdMc="></script>
+    <script src="/blog/js/add-on.js"></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-173174352-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    </div>
+  </body>
+</html>
