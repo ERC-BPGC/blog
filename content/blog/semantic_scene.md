@@ -1,6 +1,6 @@
 +++
 title = "Semantic Scene Understanding in Robotics"
-description = "An article on why semantic scene understanding could be the next big thing in autonomous robotics, where we are now, and what comes next"
+description = "An article on why semantic scene understanding could be the next big thing in autonomous robotics, where we are now, and what comes next."
 author = "Rishikesh Vanarse"
 author_link = "https://rmvanarse.github.io"
 date = "2021-03-11"
@@ -70,12 +70,12 @@ An **AGI singularity** is defined as the point in the future when Artificial Int
 1. C. Galindo, A. Saffiotti, S. Coradeschi, P. Buschka, J.-A. Fernandez-Madrigal, J. González:  Multi-hierarchical semantic maps for mobile robotics, _International Conference on Intelligent Robots and Systems_, IEEE, 2005, pp. 2278–2283
 1. O.M. Mozos, W. Burgard, Supervised learning of topological maps using se- mantic information extracted from range data; _International Conference on Intelligent Robots and Systems_, IEEE, 2006, pp. 2772–2777
 1. B. Kuipers, Modeling spatial knowledge, Cogn. Sci. 2 (2) (1978) 129–153.
-1. [Automatic Image Cationing using Deep Learning](https://medium.com/swlh/automatic-image-captioning-using-deep-learning-5e899c127387) (Medium Article)
+1. [Automatic Image Captioning using Deep Learning](https://medium.com/swlh/automatic-image-captioning-using-deep-learning-5e899c127387) (Medium Article)
 1. J. Browniee, 2017 [How to Automatically Generate Textual Descriptions for a Photograph with DL](https://machinelearningmastery.com/how-to-caption-photos-with-deep-learning/)
-1. S. Wadhwa, 2018 [Asking Questions to Images with Deep Learning](https://blog.floydhub.com/asking-questions-to-images-with-deep-learning/ ) (Floydhub Article)
+1. S. Wadhwa, 2018 [Asking Questions to Images with Deep Learning](https://blog.floydhub.com/asking-questions-to-images-with-deep-learning/) (Floydhub Article)
 1. M. Tenorth, L. Kunze, D. Jain, M. Beetz, Knowrob-map-knowledge-linked semantic object maps; _International Conference on Humanoid Robots_, IEEE, 2010, pp. 430–435
 1. L.Nicholson, M.Milford, N.Sünderhauf; QuadricSLAM: Dual Quadrics from Object Detections as Landmarks in Object-oriented SLAM
 1. [Robot Learning by Demonstration](http://www.scholarpedia.org/article/Robot_learning_by_demonstration) (Scholarpedia)
 1. [How Far are we from achieving Artificial General Intelligence?](https://www.forbes.com/sites/cognitiveworld/2019/06/10/how-far-are-we-from-achieving-artificial-general-intelligence/?sh=578c9faa6dc4) (Forbes Article)
 1. [995 experts opinion: AGI singularity by 2060](https://research.aimultiple.com/artificial-general-intelligence-singularity-timing/)
-1. [Cognitive Robotcs](https://en.wikipedia.org/wiki/Cognitive_robotics) (Wikipedia)
+1. [Cognitive Robotics](https://en.wikipedia.org/wiki/Cognitive_robotics) (Wikipedia)
