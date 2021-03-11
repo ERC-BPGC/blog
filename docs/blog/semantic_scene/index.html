@@ -20,8 +20,8 @@
 
 <meta name="generator" content="Hugo 0.75.1" /><meta itemprop="name" content="Semantic Scene Understanding in Robotics">
 <meta itemprop="description" content="An article on why semantic scene understanding could be the next big thing in autonomous robotics, where we are now, and what comes next">
-<meta itemprop="datePublished" content="2021-03-09T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2021-03-09T00:00:00+00:00" />
+<meta itemprop="datePublished" content="2021-03-11T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-03-11T00:00:00+00:00" />
 <meta itemprop="wordCount" content="1574">
 <meta itemprop="image" content="">
 
@@ -33,8 +33,8 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://erc-bpgc.github.io/blog/blog/semantic_scene/" />
 <meta property="og:image" content="" />
-<meta property="article:published_time" content="2021-03-09T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-03-09T00:00:00+00:00" />
+<meta property="article:published_time" content="2021-03-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-03-11T00:00:00+00:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content=""/>
 
@@ -213,8 +213,9 @@
     
   </div>
   <div class="meta">
-    <time datetime="2021-03-09 00:00:00 &#43;0000 UTC">March 9, 2021</time>
-    <p>Rishikesh Vanarse</p>
+    <a href="https://rmvanarse.github.io" target="blank">
+    <p style="font-size:14px;">Rishikesh Vanarse <i class="fas fa-id-badge"style="font-size:14px;"></i></p></a>
+    <time datetime="2021-03-11 00:00:00 &#43;0000 UTC">March 11, 2021</time>
     <p>8-Minute Read</p>
     
   </div>
@@ -266,14 +267,10 @@
 
     </div>
     <div class="content">
-      <a href="/blog/blog/semantic_scene/" class="image" style="--bg-image: url('https://erc-bpgc.github.io/blog/img/semantic_scene/semantic_slam.png');">
-    <img class="stretchV" src="https://erc-bpgc.github.io/blog/img/semantic_scene/semantic_slam.png" alt="">
+      <a href="/blog/blog/semantic_scene/" class="image" style="--bg-image: url('https://erc-bpgc.github.io/blog/img/semantic_scene/title.png');">
+    <img class="stretchV" src="https://erc-bpgc.github.io/blog/img/semantic_scene/title.png" alt="">
   </a>
-      <!---
-NOTES TO MEDIA TEAM:
-* Add author social media links [Also website now :)  https://rmvanarse.github.io ]
--->
-<p>I accidentally dropped my keys this morning. They fell and slid down right under the bed. I got down, making sure not to knock anything over, and tried to reach them, but they seemed out of reach. I instinctively looked around to see if I could use anything to reach the keys, and saw an unused guitar-stand nearby. It took me 4-5 seconds to dismantle the stand, and use its rod to retrieve my keys. This whole &lsquo;side-quest&rsquo; barely cost me 25 seconds.</p>
+      <p>I accidentally dropped my keys this morning. They fell and slid down right under the bed. I got down, making sure not to knock anything over, and tried to reach them, but they seemed out of reach. I instinctively looked around to see if I could use anything to reach the keys, and saw an unused guitar-stand nearby. It took me 4-5 seconds to dismantle the stand, and use its rod to retrieve my keys. This whole &lsquo;side-quest&rsquo; barely cost me 25 seconds.</p>
 <p>Being a human being, retrieving a key from under a bed is a task that is too insignificant for us to ponder over. We overcome multiple such hinderances daily, without realizing their complexity. For today&rsquo;s robots (even the most advanced ones), this very task would be extremely complex. Why is that so?</p>
 <p>Robotic arms and grippers of our age possess amazing dexterity and recent robots have overcome some of the hardest challenges in control. With advanced sensors, processors and algorithms, tasks such as localization &amp; motion planning are more efficient than ever before. Developments in AI have made real-time object detection and tracking possible. Yet, tasks such as the one mentioned above still seem near-impossible due to a simple unanswered question: How would a robot <strong>figure out</strong> what to do in such unplanned situations?</p>
 <p>Despite employing  state-of-the-art neural networks, robots do not possess a <strong><em>true understanding</em></strong> of the <strong>semantics</strong> of their environment, i.e. the <strong><em>meaning</em></strong> of the things around them. Robots do not  know how every object in their surroundings can influence their goal. Complex robot use cases (eg: disaster management and search &amp; rescue operations) that require robots to predict possible scenarios and anticipate consequences of their actions. But they are unable to correlate knowledge from different domains with what they perceive and therefore, cannot draw logical conclusions about what can/should be done. Thus, the large gap between perception and panning is that of <strong><em>reasoning</em></strong> or <strong><em>common sense</em></strong>.</p>

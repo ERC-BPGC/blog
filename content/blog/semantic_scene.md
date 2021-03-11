@@ -2,17 +2,13 @@
 title = "Semantic Scene Understanding in Robotics"
 description = "An article on why semantic scene understanding could be the next big thing in autonomous robotics, where we are now, and what comes next"
 author = "Rishikesh Vanarse"
-date = "2021-03-09"
+author_link = "https://rmvanarse.github.io"
+date = "2021-03-11"
 categories = ["innovation","ai","computer vision"]
 [[images]]
     src = "/blog/img/semantic_scene/title.png"
     stretch = "vertical"
 +++
-
-<!---
-NOTES TO MEDIA TEAM:
-* Add author social media links [Also website now :)  https://rmvanarse.github.io ]
--->
 
 I accidentally dropped my keys this morning. They fell and slid down right under the bed. I got down, making sure not to knock anything over, and tried to reach them, but they seemed out of reach. I instinctively looked around to see if I could use anything to reach the keys, and saw an unused guitar-stand nearby. It took me 4-5 seconds to dismantle the stand, and use its rod to retrieve my keys. This whole 'side-quest' barely cost me 25 seconds.
 
