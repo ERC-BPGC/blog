@@ -43,8 +43,8 @@ Therefore the concept of modular robotics has tremendous research potential and 
 <br>
 <br>
 
-## References:
+## References
 
-1. Modular robotic systems: Methods and algorithms for abstraction, planning, control, and synchronization by Hossein Ahmadzadeh et.al. - https://www.sciencedirect.com/science/article/pii/S0004370215000260
-2. Modular Self-Reconfigurable Robotic Systems: A Survey on Hardware Architectures by S. Sankhar Reddy Chennareddy et. al. - https://www.hindawi.com/journals/jr/2017/5013532/
-3. Current trends in reconfigurable modular robots design by Alberto Brunete  et.al. - https://journals.sagepub.com/doi/full/10.1177/172988141771045
+1. [Modular robotic systems: Methods and algorithms for abstraction, planning, control, and synchronization](https://www.sciencedirect.com/science/article/pii/S0004370215000260) by Hossein Ahmadzadeh et.al.
+1. [Modular Self-Reconfigurable Robotic Systems: A Survey on Hardware Architectures](https://www.hindawi.com/journals/jr/2017/5013532/) by S. Sankhar Reddy Chennareddy et. al.
+1. [Current trends in reconfigurable modular robots design](https://journals.sagepub.com/doi/full/10.1177/172988141771045) by Alberto Brunete  et.al.

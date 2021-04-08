@@ -110,6 +110,6 @@ With the advancing technology, the cost of manufacturing different components of
 
 ## References
 
-1. Why Was the Robotic Arm Invented? by  Megan Ray Nichols - https://interestingengineering.com/why-was-the-robotic-arm-invented
-2. Assembling and Controlling a Robotic Arm by Manoel Carlos Ramon - https://link.springer.com/chapter/10.1007/978-1-4302-6838-3_11
-3. Timeline of Computer History - https://www.computerhistory.org/timeline/ai-robotics/
+1. [Why Was the Robotic Arm Invented?](https://interestingengineering.com/why-was-the-robotic-arm-invented) by  Megan Ray Nichols
+1. [Assembling and Controlling a Robotic Arm](https://link.springer.com/chapter/10.1007/978-1-4302-6838-3_11) by Manoel Carlos Ramon
+1. [Timeline of Computer History](https://www.computerhistory.org/timeline/ai-robotics/)
