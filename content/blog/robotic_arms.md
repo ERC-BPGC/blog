@@ -9,6 +9,7 @@ categories = ["mechanical","innovation","industry"]
     src = "img/robotic_arms/title.png"
     stretch = "vertical"
 +++
+<!--Image folder complete location "blog/static/img"-->
 
 Most of the world's robots are designed for hard, repetitive production work. They perform activities that human beings find complicated, dangerous or tedious. The most common production robot is a robotic arm.
 

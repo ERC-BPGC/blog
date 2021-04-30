@@ -9,6 +9,7 @@ categories = ["automation","electronics","mechanical"]
     src = "img/mssr/pic1.jpg"
     stretch = "vertical"
 +++
+<!--Image folder complete location "blog/static/img"-->
 
 Robots were invented with the goal of helping humans carry out their tasks more comfortably, particularly 4D (Dirty, Dangerous, Difficult, and Dull) tasks. In designing robots, the conventional approach has been to design their hardware and software in accordance with the tasks they are supposed to do. Conventional robots can perform specific tasks accurately, but they are not very versatile and adaptive, and thus applications that are consigned to them rely heavily on their physical structure and controller capabilities. As a workaround to flexibility and adaptability limitations of fixed-body robots, Modular Self Reconfigurable Robots were introduced.
 

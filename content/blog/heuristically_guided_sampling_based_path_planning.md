@@ -9,6 +9,7 @@ categories = ["ai","automation","path planning"]
     src = "/blog/img/heuristic_planner/title.png"
     stretch = "vertical"
 +++
+<!--Image folder complete location "blog/static/img"-->
 
 One of the easiest tasks for us humans to do is move from one place to another without even meticulously planning our way. We get up from our seats and walk to the cafe, get our drink and come back to our seats. During this entire “action” that we performed, we hardly give any thought about the “trajectory” that we have to follow. For example, while walking or running, when we see that there is a banana peel or a pothole in our “path”, we tend to avoid it. This is something that comes to us naturally as humans. But for a robot, this is a complex task. There is a lot of planning required to enact certain trajectories that come naturally to humans.
 

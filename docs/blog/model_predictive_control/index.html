@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+<title>Model Predictive Control - The ERC Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/apple-touch-icon.png?v=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/favicon-32x32.png?v=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/favicon-16x16.png?v=1">
+  <link rel="manifest" href="/blog/site.webmanifest?v=1">
+  
+    <link rel="mask-icon" href="/blog/safari-pinned-tab.svg?v=1" color="#ffffff">
+    <link rel="shortcut icon" href="/blog/favicon.ico?v=1">
+    <meta name="msapplication-config" content="/blog/browserconfig.xml?v=1">
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+<meta name="generator" content="Hugo 0.75.1" /><meta itemprop="name" content="Model Predictive Control">
+<meta itemprop="description" content="The article talks about Model Predictive Control and its numerous application in industries and robotics and describes a few variants of Model Predictive Control developed recently.">
+<meta itemprop="datePublished" content="2021-04-30T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-04-30T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1254">
+<meta itemprop="image" content="">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta property="og:title" content="Model Predictive Control" />
+<meta property="og:description" content="The article talks about Model Predictive Control and its numerous application in industries and robotics and describes a few variants of Model Predictive Control developed recently." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://erc-bpgc.github.io/blog/blog/model_predictive_control/" />
+<meta property="og:image" content="" />
+<meta property="article:published_time" content="2021-04-30T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-04-30T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content=""/>
+
+<meta name="twitter:title" content="Model Predictive Control"/>
+<meta name="twitter:description" content="The article talks about Model Predictive Control and its numerous application in industries and robotics and describes a few variants of Model Predictive Control developed recently."/>
+<meta name="twitter:site" content="@erc_bpgc?s=12"/>
+<link rel="stylesheet" href="/blog/css/bundle.min.d9e04ae08c9b3049b766dbd4aeab7d862c5ea1d13679b621490e0f5df5507497.css" integrity="sha256-2eBK4IybMEm3ZtvUrqt9hixeodE2ebYhSQ4PXfVQdJc="><link disabled=true id="dark-mode-theme" rel="stylesheet" href="/blog/css/add-on.css">
+        <link rel="stylesheet" href="/blog/css/add-on1.css">
+  </head>
+
+  <body>
+    
+
+<header id="site-header" style="box-shadow:none !important;background-color: #f2f2f2 !important;">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/blog/" >> the erc blog <img class="cursorgif" src="/blog/img/cursor.gif">
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu menu">
+      
+        
+          
+          <a href="/blog" class="nav link"><i class='fa fa-home'></i> Home</a>
+        
+      
+        
+          
+          <a href="/blog/about/" class="nav link"><i class='far fa-id-card'></i> About</a>
+        
+      
+        
+          
+          <a href="/blog/categories/" class="nav link"><i class='fas fa-sitemap'></i> Categories</a>
+        
+      
+      <a href="#share-menu" class="nav link share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      <a href="#search-input" class="nav link search-toggle"><i class="fas fa-search">&nbsp;</i>Search</a>
+    </menu>
+    <div class="theme-switch-wrapper">
+      <label class="theme-switch" for="dark-mode-toggle" style="height: 44px; padding-left: 1rem;">
+          <input type="checkbox" id="dark-mode-toggle" /><i id="theme-icon" class="fas fa-moon"></i>
+          
+    </label>
+    
+  </div>
+  
+    <a href="#search-input" class="nav search-toggle"><i class="fas fa-search fa-2x">&nbsp;</i></a>
+    <a href="#share-menu" class="nav share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    
+    <a href="#site-nav" class="nav nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  <menu id="search" class="menu"><input id="search-input" class="search-input menu"></input><div id="search-results" class="search-results menu"></div></menu>
+  
+  
+    <menu id="share-menu" class="flyout-menu menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Model%20Predictive%20Control&amp;url=https%3a%2f%2ferc-bpgc.github.io%2fblog%2fblog%2fmodel_predictive_control%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <p>Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ferc-bpgc.github.io%2fblog%2fblog%2fmodel_predictive_control%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <p>Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2ferc-bpgc.github.io%2fblog%2fblog%2fmodel_predictive_control%2f&amp;title=Model%20Predictive%20Control" target="_blank" rel="noopener" class="nav share-btn reddit">
+          <p>Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2ferc-bpgc.github.io%2fblog%2fblog%2fmodel_predictive_control%2f&amp;title=Model%20Predictive%20Control" target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <p>LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2ferc-bpgc.github.io%2fblog%2fblog%2fmodel_predictive_control%2f&amp;description=Model%20Predictive%20Control" target="_blank" rel="noopener" class="nav share-btn pinterest">
+          <p>Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=Check%20out%20this%20post%20by Pranav%20Goyal&amp;body=https%3a%2f%2ferc-bpgc.github.io%2fblog%2fblog%2fmodel_predictive_control%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <p>Email</p>
+        </a>
+  
+
+
+    </menu>
+  
+</header>
+
+    <div id="wrapper">
+      <section id="site-intro" >
+  <a href="/blog/"><img src="https://erc-bpgc.github.io/blog/img/main/logo.png" class="circle" width="100" alt="Hugo Future Imperfect Slim" /></a>
+  <header>
+    <h1>the erc blog</h1>
+  </header>
+  <main>
+    <p>By the Electronics and Robotics Club</p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+        <li><a href="//twitter.com/erc_bpgc?s=12" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+<li><a href="//facebook.com/ElectronicsAndRoboticsClub" target="_blank" rel="noopener" title="Facebook" class="fab fa-facebook"></a></li>
+<li><a href="//github.com/ERC-BPGC" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+<li><a href="//instagram.com/erc_bitsgoa/" target="_blank" rel="noopener" title="Instagram" class="fab fa-instagram"></a></li>
+<li><a href="//linkedin.com/company/electronics-robotics-club-bits-goa/" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </ul>
+    </footer>
+  
+</section>
+
+      <main id="site-main">
+        
+  <article class="post">
+    <header>
+  <div class="title">
+    
+      <h2 style="font-size:1.5em !important; font-family:Arial, Helvetica, sans-serif !important; text-transform: capitalize !important; letter-spacing:3px !important ;"><a href="/blog/blog/model_predictive_control/">Model Predictive Control</a></h2>
+    
+    
+      <p>The article talks about Model Predictive Control and its numerous application in industries and robotics and describes a few variants of Model Predictive Control developed recently.</p>
+    
+  </div>
+  <div class="meta">
+    <a href="https://www.linkedin.com/in/pranav-goyal-010b08197/" target="blank">
+    <p style="font-size:14px;">Pranav Goyal <i class="fas fa-id-badge"style="font-size:14px;"></i></p></a>
+    <time datetime="2021-04-30 00:00:00 &#43;0000 UTC">April 30, 2021</time>
+    <p>6-Minute Read</p>
+    
+  </div>
+</header>
+
+    <div id="socnet-share">
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Model%20Predictive%20Control&amp;url=https%3a%2f%2ferc-bpgc.github.io%2fblog%2fblog%2fmodel_predictive_control%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <p>Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ferc-bpgc.github.io%2fblog%2fblog%2fmodel_predictive_control%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <p>Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2ferc-bpgc.github.io%2fblog%2fblog%2fmodel_predictive_control%2f&amp;title=Model%20Predictive%20Control" target="_blank" rel="noopener" class="nav share-btn reddit">
+          <p>Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2ferc-bpgc.github.io%2fblog%2fblog%2fmodel_predictive_control%2f&amp;title=Model%20Predictive%20Control" target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <p>LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2ferc-bpgc.github.io%2fblog%2fblog%2fmodel_predictive_control%2f&amp;description=Model%20Predictive%20Control" target="_blank" rel="noopener" class="nav share-btn pinterest">
+          <p>Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=Check%20out%20this%20post%20by Pranav%20Goyal&amp;body=https%3a%2f%2ferc-bpgc.github.io%2fblog%2fblog%2fmodel_predictive_control%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <p>Email</p>
+        </a>
+  
+
+
+    </div>
+    <div class="content">
+      <a href="/blog/blog/model_predictive_control/" class="image" style="--bg-image: url('https://erc-bpgc.github.io/blog/img/model_predictive_control/title.png');">
+    <img class="stretchV" src="https://erc-bpgc.github.io/blog/img/model_predictive_control/title.png" alt="">
+  </a>
+      <!--Image folder complete location "blog/static/img"-->
+<!--RF-MPC gif-->
+<figure>
+    <img src="/blog/img/model_predictive_control/rf-mpc.gif"
+         alt="RF-MPC on a Qadruped"/> <figcaption>
+            <p>RF-MPC on a Qadruped</p>
+        </figcaption>
+</figure>
+
+<p>The above image depicts a Model Predictive Control on a dynamic four-legged robot by <a href="https://github.com/YanranDing/RF-MPC">Yanran Ding</a>.</p>
+<p>Over the years, the advancement in robotics and related areas has allowed robot models to have complex and non-linear dynamic equations. The application of such robots involves dynamic environments or environments which are highly inaccessible to humans. Such robot models introduced new challenges in the control strategies as typical industrial controllers such as PID controllers can fail in guaranteeing many features in these areas. These new challenges lead to extensive research to develop optimal control strategies to satisfy the needs of different applications. One such strategy developed by researchers is Model Predictive Control (MPC).</p>
+<!--Basic concept-->
+<figure>
+    <img src="/blog/img/model_predictive_control/basic_concept.png"
+         alt="The basic concept of Model Predictive Control as a model-based and optimization-based solution."/> <figcaption>
+            <p>The basic concept of Model Predictive Control as a model-based and optimization-based solution.</p>
+        </figcaption>
+</figure>
+
+<p>One of the first-ever applications of MPC was in chemical plants to control the transients of dynamic systems with hundreds of inputs and outputs, subject to constraint. But MPC has come a long way since then, with its application covering many fields and significant improvement in its technical capabilities.</p>
+<p>Imagine walking in a dark room; we first try to sense our surroundings, then based on that, we try to predict the best path towards our goal, and finally, we take only one step on that path and then repeat this entire cycle. MPC also works on a very similar line of reasoning. The essence of MPC is to optimize the manipulatable inputs and the forecasts of process behavior. If we have a reasonably accurate dynamic model of a system, we can use this model and current measurements to predict the future outputs of the system. We can then make the appropriate changes in the input variable based on these predictions.</p>
+<!--Block Diagram-->
+<figure>
+    <img src="/blog/img/model_predictive_control/block_diagram.png"
+         alt="Block diagram of model predictive control"/> <figcaption>
+            <p>Block diagram of model predictive control</p>
+        </figcaption>
+</figure>
+
+<p>At each timestep, MPC solves an open-loop optimization problem for the prediction horizon to compute control. The <strong>prediction horizon</strong> decides how far in the future should the model predict the state of the system. The sequence of control moves calculated by the model corresponding to these predictions is called the <strong>control horizon</strong>. Even though a sequence of multiple control moves is calculated at each sampling instant, only the first move is implemented on the system. This is the reason why MPC is also called <strong>receding horizon control</strong>. After this, a new sequence is calculated for the next sampling instant, after the latest measurements become available, and again only the first input move is implemented.</p>
+<p>One obvious question that arises in mind is why we are calculating a sequence of multiple inputs if we are applying only the first input? A significant benefit of MPC arises from determining the optimal operating conditions (setpoints) and moving the process to these set points in an optimal manner based on the control calculations. By applying only the first input and recalculating the control moves based on new predictions, we ensure that all inputs are based on the optimal operating conditions, irrespective of how our system parameters are changing with time.</p>
+<!--Illustration graph-->
+<figure>
+    <img src="/blog/img/model_predictive_control/mpc_graph.png"
+         alt="Illustration of the basic concept of model predictive control"/> <figcaption>
+            <p>Illustration of the basic concept of model predictive control</p>
+        </figcaption>
+</figure>
+
+<p>MPC relies on the provided model for its computations. The model selection has a significant role in the algorithm&rsquo;s computational complexity, like its theoretical properties (e.g. stability). At the same time, the selected objective and imposed constraints also influence and define these properties.</p>
+<p>Another critical benefit of MPC is its ability to handle inequality constraints. Inequality constraints were a primary motivation for the early development of MPC. Input constraints occur due to physical limitations on the system such as motors, pumps, etc.</p>
+<p>MPC can explicitly handle constraints on both input and output because of its approach of solving open-loop optimization problems for the cost function, which can be solved easily subjected to given constraints. The nature of the optimization problem in linear MPC is a convex function, i.e. the polygon area over which optimization occurs are convex polygons. These problems are commonly referred to as Convex <strong>Quadratic Program (QP)</strong>.</p>
+<!--Convex & Non-Convex Polygons-->
+<figure>
+    <img src="/blog/img/model_predictive_control/polygons.png"
+         alt="Convex and Non-Convex polygons"/> <figcaption>
+            <p>Convex and Non-Convex polygons</p>
+        </figcaption>
+</figure>
+
+<p>The optimization problem commonly used in MPC is the <strong>finite-time optimal control problem (FTOCP)</strong>, i.e. the cost function is optimized for a finite horizon by imposing a terminal constraint.</p>
+<!--Cost Function-->
+<figure>
+    <img src="/blog/img/model_predictive_control/cost_function.png"
+         alt="Cost function optimization subjected to inequality constraints for MPC"/> <figcaption>
+            <p>Cost function optimization subjected to inequality constraints for MPC</p>
+        </figcaption>
+</figure>
+
+<p>Some other benefits of MPC include allowing time delays, inverse response, inherent nonlinearities (changing dynamics), and changing control objective and sensor failure because of its predictive nature.</p>
+<p>If we think about the quadruped simulation (RF-MPC on quadruped) we saw above, we can understand why MPC  is a popular choice for such systems. Designing and controlling a legged robot requires the control design to use its inherent dynamics while dealing with constraints due to hardware limitations and interactions with the environment, which are some of the significant benefits of MPC. The movement of legged robots mainly involves controlling the joint angles of the legs. The inputs given to motors present at these joints must be strictly within a specific range as any arbitrary movement of legs can lead to damage to the robot. In legged robots, multiple variables are required to be controlled, such as joint angles, CoM of the robot, the robot&rsquo;s velocity, the velocity of the end effectors etc., which can be handled conveniently by MPC by designing a multi-variable cost function.</p>
+<p>Some of the popular robots that use MPC are <a href="https://rsl.ethz.ch/robots-media/anymal.html">ANYmal</a> by ETH Zurich, <a href="https://www.bostondynamics.com/atlas">Atlas</a> by Boston Dynamics and <a href="https://biomimetics.mit.edu/">MIT Cheetah</a>.</p>
+<!--ANYmal-->
+<figure>
+    <img src="/blog/img/model_predictive_control/anymal.png"
+         alt="ANYmal by ETH Zurich"/> <figcaption>
+            <p>ANYmal by ETH Zurich</p>
+        </figcaption>
+</figure>
+
+<h2 id="variants-of-mpc">Variants of MPC</h2>
+<p><strong>Non-Linear MPC:</strong> Nonlinear Model Predictive Control, or NMPC, is a variant of model MPC, characterized by non-linear system models. NMPC also requires the iterative solution of optimal control problems on a finite prediction horizon as in linear MPC. While these problems are convex in linear MPC, in non-linear MPC, they are not necessarily convex anymore.</p>
+<!--Block Diagram Non-Linear-->
+<figure>
+    <img src="/blog/img/model_predictive_control/block_diagram_nl.png"
+         alt="Block diagram of non-linear MPC"/> <figcaption>
+            <p>Block diagram of non-linear MPC</p>
+        </figcaption>
+</figure>
+
+<p><strong>Explicit MPC:</strong> Explicit MPC (eMPC) allows fast evaluation of the control law for some systems, in stark contrast to the online MPC. Explicit MPC is based on the parametric programming technique (optimization problem is solved as a function of multiple parameters). The solution to the MPC control problem formulated as an optimization problem is pre-computed offline. This offline solution, i.e. the control law, is often in the form of a piecewise affine function (PWA).</p>
+<!--Explicit MPC-->
+<figure>
+    <img src="/blog/img/model_predictive_control/empc.png"
+         alt="eMPC of LPV system in controllable canonical form"/> <figcaption>
+            <p>eMPC of LPV system in controllable canonical form</p>
+        </figcaption>
+</figure>
+
+<p>Other than these, there are many more variants of MPC coming up, such as robust MPC and Hybrid MPC, which can account for set bounded disturbance while still ensuring state constraints are met.</p>
+<p>Given its remarkable success, MPC has been a popular subject for academic and industrial research. Significant extensions of the early MPC methodology have been developed, and theoretical analysis has provided insight into the strengths and weaknesses of MPC. There are many well-documented implementations of MPC available online one of such implementation is by <a href="https://github.com/AtsushiSakai/PyAdvancedControl">Atsushi Sakai</a>. Matlab also has an inbuilt <a href="https://in.mathworks.com/products/model-predictive-control.html">toolbox</a> specifically dedicated to MPC. To understand more about Model Predictive Control you can also visit the <a href="https://erc-bpgc.github.io/handbook/automation/ControlTheory/MPC/">ERC handbook page</a>.</p>
+<br>
+<br>
+<h2 id="references">References</h2>
+<ol>
+<li>Seborg, D. E.; Mellichamp, D. A. &amp; Edgar, T. F. (2011), Process Dynamics and Control, John Wiley &amp; Sons. (Chapter 20th, Model Predictive Control)</li>
+<li>Ruchika, Neha Raghu.&quot; Model Predictive Control: History and Development&quot;. International Journal of Engineering Trends and Technology (IJETT)</li>
+<li><a href="https://control.com/technical-articles/what-is-model-predictive-control-mpc/">What is Model Predictive Control</a> (MPC), Mitesh Agrawal, August 10, 2020</li>
+<li>Prof. S. Boyd, EE364b, Stanford University</li>
+<li>EE392m - Spring 2005, Gorinevsky, Stanford University</li>
+<li>Y. Ding, A. Pandala and H. -W. Park, &ldquo;Real-time Model Predictive Control for Versatile Dynamic Motions in Quadrupedal Robots,&rdquo; 2019 International Conference on Robotics and Automation (ICRA)</li>
+<li><a href="https://www.autonomousrobotslab.com/linear-model-predictive-control.html">Linear Model Predictive Control</a>, Autonomous Robots Lab</li>
+</ol>
+
+    </div>
+    <footer>
+      <div class="stats">
+  
+    <ul class="categories" style="font-size:medium; max-width:100% !important;">
+      
+        
+          <li><a class="article-terms-link" href="/blog/categories/ai/">ai</a></li>
+        
+          <li><a class="article-terms-link" href="/blog/categories/automation/">automation</a></li>
+        
+          <li><a class="article-terms-link" href="/blog/categories/controls/">controls</a></li>
+        
+      
+    </ul>
+  
+  
+    
+  
+</div>
+
+    </footer>
+  </article>
+  
+    
+  <article class="post">
+    
+    
+
+    
+    
+  </article>
+
+
+  
+  <div class="pagination">
+    
+    
+      <a href="/blog/blog/heuristically_guided_sampling_based_path_planning/" class="button right"><span>Heuristically guided Sampling based Path Planning</span></a>
+    
+  </div>
+
+      </main>
+      <section id="site-sidebar">
+  
+    
+  
+
+  
+    
+      <section id="categories">
+        <header>
+          <h1><a href="/blog/categories">categories</a></h1>
+        </header>
+        <ul>
+          
+          
+          <li>
+              <a href="/blog/categories/ai/">ai<span class="count">3</span></a>
+          
+          <li>
+              <a href="/blog/categories/automation/">automation<span class="count">3</span></a>
+          
+          <li>
+              <a href="/blog/categories/innovation/">innovation<span class="count">2</span></a>
+          
+          <li>
+              <a href="/blog/categories/mechanical/">mechanical<span class="count">2</span></a>
+          
+          <li>
+              <a href="/blog/categories/computer-vision/">computer-vision<span class="count">1</span></a>
+          
+          <li>
+              <a href="/blog/categories/controls/">controls<span class="count">1</span></a>
+          
+          <li>
+              <a href="/blog/categories/electronics/">electronics<span class="count">1</span></a>
+          
+          <li>
+              <a href="/blog/categories/industry/">industry<span class="count">1</span></a>
+          
+          <li>
+              <a href="/blog/categories/path-planning/">path-planning<span class="count">1</span></a>
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+
+  
+    
+  
+</section>
+
+      <footer id="site-footer">
+  
+      <ul class="socnet-icons">
+        
+        <li><a href="//twitter.com/erc_bpgc?s=12" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+<li><a href="//facebook.com/ElectronicsAndRoboticsClub" target="_blank" rel="noopener" title="Facebook" class="fab fa-facebook"></a></li>
+<li><a href="//github.com/ERC-BPGC" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+<li><a href="//instagram.com/erc_bitsgoa/" target="_blank" rel="noopener" title="Instagram" class="fab fa-instagram"></a></li>
+<li><a href="//linkedin.com/company/electronics-robotics-club-bits-goa/" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </ul>
+  
+  <p class="copyright">
+    © 2021 The ERC Blog
+      <br>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.75.1' target='_blank' rel='noopener'>Hugo</a>
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      <script src="/blog/js/highlight.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script><script src="/blog/js/bundle.min.91795bce3029963d71f84e74f8a83d48ab2cdf260e3db7ecf63d3294c95674c7.js" integrity="sha256-kXlbzjAplj1x&#43;E50&#43;Kg9SKss3yYOPbfs9j0ylMlWdMc="></script>
+    <script src="/blog/js/add-on.js"></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-173174352-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    </div>
+  </body>
+</html>
