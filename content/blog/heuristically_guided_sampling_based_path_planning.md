@@ -2,7 +2,7 @@
 title = "Heuristically guided Sampling based Path Planning"
 description = "The article talks about the problem of path planning and introduces various different existing algorithm."
 author = "Suhrudh S"
-author_link = "https://www.linkedin.com/in/suhrudh-sarathy-a55a851a0/"
+author_link = "https://suhrudhsarathy.github.io/"
 date = "2021-04-08"
 categories = ["ai","automation","path planning"]
 [[images]]
