@@ -37,7 +37,7 @@ Requirements: git, ruby, gem, jekyll
    hugo server
    ```
 
-Output:
+Output:  
     '''shell
     Start building sites …
     hugo v0.92.2-CDF6A0D6 windows/amd64 BuildDate=2022-02-11T14:17:39Z VendorInfo=gohugoio
