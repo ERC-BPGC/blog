@@ -59,7 +59,7 @@ Biologically inspired robots with a structure resembling fish for aquatic locomo
 Snake-bot for limbless locomotion and six-legged hexapod robot inspired from cockroach locomotion.
 
 <!--Sojourner-->
-{{< figure src="/blog/img/bbr/sojourner.gif" >}}
+{{< figure src="/blog/img/bbr/sojourner.png" >}}
 
 Behavior-based Mars Rover ‘Sojourner’
 Currently, research is going on to develop fully autonomous robots and extend the intelligence of these robots to the intelligence of the human brain.
