@@ -12,7 +12,7 @@ Requirements: git, ruby, gem, jekyll
 
    ```shell
    powershell
-    iex <new-object net.webclient>.downloadstring<'https://get.scoop.sh'>
+   iex <new-object net.webclient>.downloadstring<'https://get.scoop.sh'>
    ```
 
 2. Install Curl: A command line tool for transferring data with URL syntax.
@@ -31,7 +31,7 @@ Requirements: git, ruby, gem, jekyll
 
 ## Running Local Host Server
 
-1. Build the blog: Run in root directory of the repository
+- Build the blog: Run in root directory of the repository
 
    ```shell
    hugo
@@ -42,6 +42,7 @@ Requirements: git, ruby, gem, jekyll
    ```shell
    hugo server
    ```
+
 
 Output:
     '''shell
@@ -70,6 +71,8 @@ Output:
     Press Ctrl+C to stop
     '''
 
-Copy the Link given into your browser.
+Copy the Link (http://localhost:<4Numbers>/blog/) from the output into your browser.
 
 Note: Whenever pushing any changes to the blog, make sure to build the blog (Step 1) and then run the server (Step 2).
+   
+
