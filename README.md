@@ -38,11 +38,10 @@ Requirements: git, ruby, gem, jekyll
    ```
 
 Output:  
-    '''shell
+    '''shell  
     Start building sites …
     hugo v0.92.2-CDF6A0D6 windows/amd64 BuildDate=2022-02-11T14:17:39Z VendorInfo=gohugoio
-    WARN 2022/02/15 12:31:40 The google_news internal template will be removed in a future release. Please remove calls to this template. See <https://github.com/gohugoio/hugo/issues/9172> for additional information.
-
+    WARN 2022/02/15 12:31:40 The google_news internal template will be removed in a future release. Please remove calls to this template. See            <https://github.com/gohugoio/hugo/issues/9172> for additional information.
                     | EN
     -------------------+-----
     Pages            | 42
