@@ -31,22 +31,10 @@ Requirements: git, ruby, gem, jekyll
 
 ## Running Local Host Server
 
-1. Build the blog: Run in root directory of the repository
+- Build the blog: Run in root directory of the repository
 
    ```shell
    hugo server
    ```
-
-Output:  
-    '''shell 
-    Built in 119 ms
-    Watching for changes in C:\Users\<usr>\blog\{archetypes,content,data,layouts,static,themes}
-    Watching for config changes in C:\Users\<usr>\blog\config.toml
-    Environment: "development"
-    Serving pages from memory
-    Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
-    Web Server is available at http://localhost:1313/blog/ (bind address 127.0.0.1)
-    Press Ctrl+C to stop
-    '''
-
-Copy the Link given into your browser.
+   
+Copy the Link (http://localhost:<4Numbers>/blog/) from the output into your browser.
