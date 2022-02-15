@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+<title>Behaviour Based Robotics - The ERC Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/apple-touch-icon.png?v=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/favicon-32x32.png?v=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/favicon-16x16.png?v=1">
+  <link rel="manifest" href="/blog/site.webmanifest?v=1">
+  
+    <link rel="mask-icon" href="/blog/safari-pinned-tab.svg?v=1" color="#ffffff">
+    <link rel="shortcut icon" href="/blog/favicon.ico?v=1">
+    <meta name="msapplication-config" content="/blog/browserconfig.xml?v=1">
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+<meta name="generator" content="Hugo 0.92.2" /><meta itemprop="name" content="Behaviour Based Robotics">
+<meta itemprop="description" content="This article talks about the basics of behaviour based robotics and shows some examples"><meta itemprop="datePublished" content="2022-02-14T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2022-02-14T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1296"><meta itemprop="image" content="">
+<meta itemprop="keywords" content="" /><meta property="og:title" content="Behaviour Based Robotics" />
+<meta property="og:description" content="This article talks about the basics of behaviour based robotics and shows some examples" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://erc-bpgc.github.io/blog/blog/bbr/" /><meta property="og:image" content="" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2022-02-14T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-02-14T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content=""/>
+
+<meta name="twitter:title" content="Behaviour Based Robotics"/>
+<meta name="twitter:description" content="This article talks about the basics of behaviour based robotics and shows some examples"/>
+<meta name="twitter:site" content="@erc_bpgc?s=12"/>
+<link rel="stylesheet" href="/blog/css/bundle.min.6ad9eb85bff384c75937a02036b01425a2ca63f19a96535b8ba5b181db62a4b3.css" integrity="sha256-atnrhb/zhMdZN6AgNrAUJaLKY/GallNbi6WxgdtipLM="><link disabled=true id="dark-mode-theme" rel="stylesheet" href="/blog/css/add-on.css">
+        <link rel="stylesheet" href="/blog/css/add-on1.css">
+  </head>
+
+  <body>
+    
+
+<header id="site-header" style="box-shadow:none !important;background-color: #f2f2f2 !important;">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/blog/" >> the erc blog <img class="cursorgif" src="/blog/img/cursor.gif">
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu menu">
+      
+        
+          
+          <a href="/blog" class="nav link"><i class='fa fa-home'></i> Home</a>
+        
+      
+        
+          
+          <a href="/blog/about/" class="nav link"><i class='far fa-id-card'></i> About</a>
+        
+      
+        
+          
+          <a href="/blog/categories/" class="nav link"><i class='fas fa-sitemap'></i> Categories</a>
+        
+      
+      <a href="#share-menu" class="nav link share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      <a href="#search-input" class="nav link search-toggle"><i class="fas fa-search">&nbsp;</i>Search</a>
+    </menu>
+    <div class="theme-switch-wrapper">
+      <label class="theme-switch" for="dark-mode-toggle" style="height: 44px; padding-left: 1rem;">
+          <input type="checkbox" id="dark-mode-toggle" /><i id="theme-icon" class="fas fa-moon"></i>
+          
+    </label>
+    
+  </div>
+  
+    <a href="#search-input" class="nav search-toggle"><i class="fas fa-search fa-2x">&nbsp;</i></a>
+    <a href="#share-menu" class="nav share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    
+    <a href="#site-nav" class="nav nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  <menu id="search" class="menu"><input id="search-input" class="search-input menu"></input><div id="search-results" class="search-results menu"></div></menu>
+  
+  
+    <menu id="share-menu" class="flyout-menu menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Behaviour%20Based%20Robotics&amp;url=https%3a%2f%2ferc-bpgc.github.io%2fblog%2fblog%2fbbr%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <p>Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ferc-bpgc.github.io%2fblog%2fblog%2fbbr%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <p>Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2ferc-bpgc.github.io%2fblog%2fblog%2fbbr%2f&amp;title=Behaviour%20Based%20Robotics" target="_blank" rel="noopener" class="nav share-btn reddit">
+          <p>Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2ferc-bpgc.github.io%2fblog%2fblog%2fbbr%2f&amp;title=Behaviour%20Based%20Robotics" target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <p>LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2ferc-bpgc.github.io%2fblog%2fblog%2fbbr%2f&amp;description=Behaviour%20Based%20Robotics" target="_blank" rel="noopener" class="nav share-btn pinterest">
+          <p>Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=Check%20out%20this%20post%20by Rohan%20Divekar&amp;body=https%3a%2f%2ferc-bpgc.github.io%2fblog%2fblog%2fbbr%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <p>Email</p>
+        </a>
+  
+
+
+    </menu>
+  
+</header>
+
+    <div id="wrapper">
+      <section id="site-intro" >
+  <a href="/blog/"><img src="https://erc-bpgc.github.io/blog/img/main/logo.png" class="circle" width="100" alt="Hugo Future Imperfect Slim" /></a>
+  <header>
+    <h1>the erc blog</h1>
+  </header>
+  <main>
+    <p>By the Electronics and Robotics Club</p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+        <li><a href="//twitter.com/erc_bpgc?s=12" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+<li><a href="//facebook.com/ElectronicsAndRoboticsClub" target="_blank" rel="noopener" title="Facebook" class="fab fa-facebook"></a></li>
+<li><a href="//github.com/ERC-BPGC" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+<li><a href="//instagram.com/erc_bitsgoa/" target="_blank" rel="noopener" title="Instagram" class="fab fa-instagram"></a></li>
+<li><a href="//linkedin.com/company/electronics-robotics-club-bits-goa/" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </ul>
+    </footer>
+  
+</section>
+
+      <main id="site-main">
+        
+  <article class="post">
+    <header>
+  <div class="title">
+    
+      <h2 style="font-size:1.5em !important; font-family:Arial, Helvetica, sans-serif !important; text-transform: capitalize !important; letter-spacing:3px !important ;"><a href="/blog/blog/bbr/">Behaviour Based Robotics</a></h2>
+    
+    
+      <p>This article talks about the basics of behaviour based robotics and shows some examples</p>
+    
+  </div>
+  <div class="meta">
+    <a href="https://github.com/divekarrohan" target="blank">
+    <p style="font-size:14px;">Rohan Divekar <i class="fas fa-id-badge"style="font-size:14px;"></i></p></a>
+    <time datetime="2022-02-14 00:00:00 &#43;0000 UTC">February 14, 2022</time>
+    <p>7-Minute Read</p>
+    
+  </div>
+</header>
+
+    <div id="socnet-share">
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Behaviour%20Based%20Robotics&amp;url=https%3a%2f%2ferc-bpgc.github.io%2fblog%2fblog%2fbbr%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <p>Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ferc-bpgc.github.io%2fblog%2fblog%2fbbr%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <p>Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2ferc-bpgc.github.io%2fblog%2fblog%2fbbr%2f&amp;title=Behaviour%20Based%20Robotics" target="_blank" rel="noopener" class="nav share-btn reddit">
+          <p>Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2ferc-bpgc.github.io%2fblog%2fblog%2fbbr%2f&amp;title=Behaviour%20Based%20Robotics" target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <p>LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2ferc-bpgc.github.io%2fblog%2fblog%2fbbr%2f&amp;description=Behaviour%20Based%20Robotics" target="_blank" rel="noopener" class="nav share-btn pinterest">
+          <p>Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=Check%20out%20this%20post%20by Rohan%20Divekar&amp;body=https%3a%2f%2ferc-bpgc.github.io%2fblog%2fblog%2fbbr%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <p>Email</p>
+        </a>
+  
+
+
+    </div>
+    <div class="content">
+      <a href="/blog/blog/bbr/" class="image" style="--bg-image: url('https://erc-bpgc.github.io/blog/img/bbr/nasa.gif');">
+    <img src="https://erc-bpgc.github.io/blog/img/bbr/nasa.gif" alt="">
+  </a>
+      <p>Have you ever wondered why we humans survived the race of evolution amongst all the other creatures that inhabited Earth millions of years ago?</p>
+<p>It is because of our intelligence and ability to acclimatize to a changing environment. Similarly, the idea of robots operating in response to their environment was proposed in the late eighties. This was known as <strong>Behavior-Oriented Artificial Intelligence</strong>.</p>
+<p>In that era, robots were designed to do labor-intensive tasks and the term artificial intelligence was limited to robots executing specific sets of instructions on their own which were already fed to their system at the time of design which was previously known as ‘classical AI’. This common approach towards robotics changed over course of time when the need for robots started to arise not only to do labor-intensive tasks but to also perform complex tasks where humans cannot reach, for example exploring the depth of Earth or cleaning difficult to reach sewage blocks. This led to the current development in the definition of AI and furthered the idea of Behavior-Based Robotics.</p>
+<p>Behaviour-Based Robotics, or BBR can be defined as <em><strong>an approach in robotics that focuses on robots that can exhibit complex appearing behaviors despite little internal variable states to model its immediate environment and gradually correct its actions via sensory-motor links</strong></em>. This definition might seem daunting at the beginning but it is quite straightforward to understand and is explained further.</p>
+<p>Behavior-based robots respond to their external stimuli which enables them to avoid obstacles and complete their tasks. For example, if a robot is supposed to deliver some instrument in a particular hospital room. Mapping the whole structure of a hospital is not beneficial as it will keep changing according to real-time situations and there might be too much crowd for the robot to move in a previously empty room, that is why mapping a small area in its environment enables the robot to work efficiently and also enables the robot to have less complex instruction set as it has to only implement actions like wandering, obstacle avoiding and delivering the package while classical AI-Based robot will have to include mapped environment of the hospital and have to find the best path according to the map which might not work in a real-time scenario.</p>
+<!--Classical Approach-->
+<figure><img src="/blog/img/bbr/classical_approach.gif"
+         alt="Classical AI Approach"/><figcaption>
+            <p>Classical AI Approach</p>
+        </figcaption>
+</figure>
+
+<p>The figure above illustrates the classical AI approach which focuses on planning out the course of actions beforehand and then doing the actual task while the figure below illustrates a behavior-based approach that is doing the basic actions like wandering, obstacle avoiding, etc. by actuators from information sensed from its external environment.</p>
+<!--Obstacle Avoidance-->
+<figure><img src="/blog/img/bbr/bbr_obstacle.gif"
+         alt="Behaviour Based Robot for Obstcale Avoidance"/><figcaption>
+            <p>Behaviour Based Robot for Obstcale Avoidance</p>
+        </figcaption>
+</figure>
+
+<p>This huge advantage of adaptability and less complexity has made BBR popular. Some features of behavior-based robots are mentioned below:</p>
+<ul>
+<li><em><strong>Autonomous</strong></em>: behavior-based robots are highly autonomous, that is they are not dependent much on human instructions for executing their task.</li>
+<li><em><strong>Mechanically Imprecise</strong></em>: Classic AI-based robots need to be mechanically precisely shaped as all instructions which are to be executed are given to robots taking into account their precise shape. Behavior-based Robots do not require precise shape since they are adaptable to their environment. This enables us to design robots using BBR at a cheaper cost and less weight.</li>
+<li><em><strong>Less Computational Resources</strong></em>: Computational Resources are less in robots designed using BBR as discussed in the example at the beginning of the article.</li>
+<li><em><strong>Improving through Learning</strong></em>: Robots designed using BBR can improve through learning which enables them to cope up with the surprises they might face in their tasks.</li>
+<li><em><strong>Software can be Reused</strong></em>: Behavior-based Robots rely more on types of sensors and motors connected to them than a concrete structure which enables us to port low-level code from one robot to another.</li>
+<li><em><strong>Integrated into an Environment</strong></em>: Behavior-based robots are not seen as isolated devices but as a part of their environment due to their adaptability. Behavior-based Robots tend to be more natural in their behaviors (i.e., their movements). Just like an animal behaves as an integrated part of its surroundings, behavior-based robots behave as a part of their integrated environment.</li>
+</ul>
+<p>Along with these features, Behavior-based Robots need to prioritize their tasks to ensure that their survival or the survival of their target is ensured. To achieve this, Behavior-based Robots are first equipped with the most fundamental of all behaviors, that deal with their survival. At work, these robots can prioritize their tasks according to the situations they face. For example, if a robot faces an issue of low battery, then its priority task should be to find a nearby charging station even if it makes it move apart from its main goal as the robot should remain functional throughout the task to complete it. In some scenarios, a robot has to sacrifice itself to protect a human being in case of bomb-defusing robots or if it can cause damage to some other things like important artificial satellites while exploring space.</p>
+<p>Behavior-based Robotics has its key feature <em><strong>adaptation</strong></em> which we have observed from a variety of living species around us for many generations. That is why designs of Behavior-based Robots are inspired by biological structures of different species(biologically inspired) or their behaviors(ethologically inspired). These Behavior-based Robots have a wide range of applications that are used in practical applications as well as in futuristic exploratory endeavors. Some of the standard examples of Behavior-based Robotics are Obstacle avoidance, navigation, terrain mapping, chasing/pursuit, object manipulation, task division, and cooperation. Even the Mars rover ‘Sojourner’ is designed to autonomously explore the surface of Mars and analyze its environment. The current advancement in Behavior-based robotics has enabled us to have the following robots:</p>
+<!--nerd herd--->
+<figure><img src="/blog/img/bbr/nerd_herd.gif"/>
+</figure>
+
+<p>Robots inspired by observing equivalent behavior of ants, chimps, chickens, etc. But not physically structured like those species(ethologically inspired).</p>
+<!--fish-->
+<figure><img src="/blog/img/bbr/fish.gif"/>
+</figure>
+
+<!--bat-->
+<figure><img src="/blog/img/bbr/bat.gif"/>
+</figure>
+
+<p>Biologically inspired robots with a structure resembling fish for aquatic locomotion and a structure resembling a bat for terrestrial locomotion.</p>
+<!--snake-->
+<figure><img src="/blog/img/bbr/snake.gif"/>
+</figure>
+
+<!--hexapad-->
+<figure><img src="/blog/img/bbr/hexapod.gif"/>
+</figure>
+
+<p>Snake-bot for limbless locomotion and six-legged hexapod robot inspired from cockroach locomotion.</p>
+<!--Sojourner-->
+<figure><img src="/blog/img/bbr/sojourner.gif"/>
+</figure>
+
+<p>Behavior-based Mars Rover ‘Sojourner’
+Currently, research is going on to develop fully autonomous robots and extend the intelligence of these robots to the intelligence of the human brain.</p>
+<!--Nasa-->
+<p><figure><img src="/blog/img/bbr/nasa.gif"/>
+</figure>
+
+Nasa aims to develop such robots having human-like intelligence for futuristic space missions</p>
+<p>Some disadvantages or inefficiencies associated with BBR:</p>
+<ul>
+<li>Despite having research going on in the field of BBR, the robots made using this technology are showing intelligence not more than insect level intelligence which is not even close to the intelligence and complexity of the human brain.</li>
+<li>Classical AI-Based robots are more efficient than the BBR in an environment which doesn’t change in real-time or in case tasks to be performed are repetitive like robots used in the manufacturing industry where the same task is to be repeated daily. In these cases, it is convenient to feed all the information to the robot beforehand which can help to perform the tasks easily.</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>Behavior-based Robotics is a rapidly growing field because of its special feature of adaptability. Behavior-Based Robots can be used to perform tasks that human beings can’t like exploring space or analyzing the surfaces of planets in our solar system. This field has immense potential and breakthroughs will be witnessed soon via various research projects that are underway.</p>
+<br>
+<br>
+<h2 id="references">References</h2>
+<p>If you want to explore the concept of Behavior-Based Robotics in more detail and technical terms, you can refer to these links or textbooks</p>
+<ol>
+<li>
+<p>Arkin Ronald C. “Behavior Based Robotics”. The MIT Press Cambridge, Massachusetts,1998.</p>
+</li>
+<li>
+<p><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=724059">Andreas Berk. “Behavior-based Robotics, its scope, and its prospects”. Vrije Universiteit Brussel, Artificial Intelligence Laboratory Pleinlaan 2, 1050 Brussels, Belgium</a></p>
+</li>
+<li>
+<p><a href="http://web.cecs.pdx.edu/~mperkows/CLASS_479/behavioral.html">Behavioral Robotics Reading</a></p>
+</li>
+<li>
+<p>Mataric Maja J. “Behavior-based robotics as a tool for synthesis of artificial behavior and analysis of natural behavior”. <a href="https://reader.elsevier.com/reader/sd/pii/S1364661398011413?token=12C47A94B84C0631C647BB8411740C18354945EC3876C66B63C46A34FEBAD68697B624CE88EF">Trends in Cognitive Sciences – Vol. 2, No. 3, March 1998</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Bio-inspired_robotics">Bio-inspired Robotics</a></p>
+</li>
+<li>
+<p><a href="https://news.mit.edu/2015/nasa-gives-mit-humanoid-robot-future-space-missions-1117">NASA gives MIT a humanoid robot to develop software for future space missions</a></p>
+</li>
+</ol>
+
+    </div>
+    <footer>
+      <div class="stats">
+  
+    <ul class="categories" style="font-size:medium; max-width:100% !important;">
+      
+        
+          <li><a class="article-terms-link" href="/blog/categories/ai/">ai</a></li>
+        
+          <li><a class="article-terms-link" href="/blog/categories/robotics/">robotics</a></li>
+        
+          <li><a class="article-terms-link" href="/blog/categories/behavious-based-robotics/">behavious based robotics</a></li>
+        
+          <li><a class="article-terms-link" href="/blog/categories/automation/">automation</a></li>
+        
+      
+    </ul>
+  
+  
+    
+  
+</div>
+
+    </footer>
+  </article>
+  
+    
+  <article class="post">
+    
+    
+
+    
+    
+  </article>
+
+
+  
+  <div class="pagination">
+    
+    
+      <a href="/blog/blog/model_predictive_control/" class="button right"><span>Model Predictive Control</span></a>
+    
+  </div>
+
+      </main>
+      <section id="site-sidebar">
+  
+    
+  
+
+  
+    
+      <section id="categories">
+        <header>
+          <h1><a href="/blog/categories">Categories</a></h1>
+        </header>
+        <ul>
+          
+          
+          <li>
+              <a href="/blog/categories/ai/">ai<span class="count">4</span></a>
+          
+          <li>
+              <a href="/blog/categories/automation/">automation<span class="count">4</span></a>
+          
+          <li>
+              <a href="/blog/categories/innovation/">innovation<span class="count">2</span></a>
+          
+          <li>
+              <a href="/blog/categories/mechanical/">mechanical<span class="count">2</span></a>
+          
+          <li>
+              <a href="/blog/categories/behavious-based-robotics/">behavious-based-robotics<span class="count">1</span></a>
+          
+          <li>
+              <a href="/blog/categories/computer-vision/">computer-vision<span class="count">1</span></a>
+          
+          <li>
+              <a href="/blog/categories/controls/">controls<span class="count">1</span></a>
+          
+          <li>
+              <a href="/blog/categories/electronics/">electronics<span class="count">1</span></a>
+          
+          <li>
+              <a href="/blog/categories/industry/">industry<span class="count">1</span></a>
+          
+          <li>
+              <a href="/blog/categories/path-planning/">path-planning<span class="count">1</span></a>
+          
+          <li>
+              <a href="/blog/categories/robotics/">robotics<span class="count">1</span></a>
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+
+  
+    
+  
+</section>
+
+      <footer id="site-footer">
+  
+      <ul class="socnet-icons">
+        
+        <li><a href="//twitter.com/erc_bpgc?s=12" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+<li><a href="//facebook.com/ElectronicsAndRoboticsClub" target="_blank" rel="noopener" title="Facebook" class="fab fa-facebook"></a></li>
+<li><a href="//github.com/ERC-BPGC" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+<li><a href="//instagram.com/erc_bitsgoa/" target="_blank" rel="noopener" title="Instagram" class="fab fa-instagram"></a></li>
+<li><a href="//linkedin.com/company/electronics-robotics-club-bits-goa/" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </ul>
+  
+  <p class="copyright">
+    © 2022 The ERC Blog
+      <br>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.92.2' target='_blank' rel='noopener'>Hugo</a>
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      <script src="/blog/js/highlight.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script><script src="/blog/js/bundle.min.fcf0117a795f43011381c1b622ca2f4fdd4a1ab769d6d0b3a03e11cee95098fd.js" integrity="sha256-/PARenlfQwETgcG2IsovT91KGrdp1tCzoD4RzulQmP0="></script>
+    <script src="/blog/js/add-on.js"></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-173174352-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    </div>
+  </body>
+</html>

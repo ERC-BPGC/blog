@@ -14,7 +14,7 @@
       
       <guid>https://erc-bpgc.github.io/blog/blog/model_predictive_control/</guid>
       <description>The below animation depicts a Model Predictive Control on a dynamic four-legged robot by Yanran Ding.
-  RF-MPC on a Qadruped
+ RF-MPC on a Qadruped
   Over the years, the advancement in robotics and related areas has allowed robot models to have complex and non-linear dynamic equations. The application of such robots involves dynamic environments or environments which are highly inaccessible to humans. Such robot models introduced new challenges in the control strategies as typical industrial controllers such as PID controllers can fail in guaranteeing many features in these areas.</description>
     </item>
     

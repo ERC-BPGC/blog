@@ -18,30 +18,24 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.75.1" /><meta itemprop="name" content="Semantic Scene Understanding in Robotics">
-<meta itemprop="description" content="An article on why semantic scene understanding could be the next big thing in autonomous robotics, where we are now, and what comes next.">
-<meta itemprop="datePublished" content="2021-03-11T00:00:00+00:00" />
+<meta name="generator" content="Hugo 0.92.2" /><meta itemprop="name" content="Semantic Scene Understanding in Robotics">
+<meta itemprop="description" content="An article on why semantic scene understanding could be the next big thing in autonomous robotics, where we are now, and what comes next."><meta itemprop="datePublished" content="2021-03-11T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2021-03-11T00:00:00+00:00" />
-<meta itemprop="wordCount" content="1574">
-<meta itemprop="image" content="">
-
-
-
-<meta itemprop="keywords" content="" />
-<meta property="og:title" content="Semantic Scene Understanding in Robotics" />
+<meta itemprop="wordCount" content="1574"><meta itemprop="image" content="">
+<meta itemprop="keywords" content="" /><meta property="og:title" content="Semantic Scene Understanding in Robotics" />
 <meta property="og:description" content="An article on why semantic scene understanding could be the next big thing in autonomous robotics, where we are now, and what comes next." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://erc-bpgc.github.io/blog/blog/semantic_scene/" />
-<meta property="og:image" content="" />
+<meta property="og:url" content="https://erc-bpgc.github.io/blog/blog/semantic_scene/" /><meta property="og:image" content="" /><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2021-03-11T00:00:00+00:00" />
 <meta property="article:modified_time" content="2021-03-11T00:00:00+00:00" />
+
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content=""/>
 
 <meta name="twitter:title" content="Semantic Scene Understanding in Robotics"/>
 <meta name="twitter:description" content="An article on why semantic scene understanding could be the next big thing in autonomous robotics, where we are now, and what comes next."/>
 <meta name="twitter:site" content="@erc_bpgc?s=12"/>
-<link rel="stylesheet" href="/blog/css/bundle.min.d9e04ae08c9b3049b766dbd4aeab7d862c5ea1d13679b621490e0f5df5507497.css" integrity="sha256-2eBK4IybMEm3ZtvUrqt9hixeodE2ebYhSQ4PXfVQdJc="><link disabled=true id="dark-mode-theme" rel="stylesheet" href="/blog/css/add-on.css">
+<link rel="stylesheet" href="/blog/css/bundle.min.6ad9eb85bff384c75937a02036b01425a2ca63f19a96535b8ba5b181db62a4b3.css" integrity="sha256-atnrhb/zhMdZN6AgNrAUJaLKY/GallNbi6WxgdtipLM="><link disabled=true id="dark-mode-theme" rel="stylesheet" href="/blog/css/add-on.css">
         <link rel="stylesheet" href="/blog/css/add-on1.css">
   </head>
 
@@ -279,9 +273,8 @@
 <p>One of the relatively more explored sub-fields of semantic scene understanding is <strong>semantic <a href="https://in.mathworks.com/discovery/slam.html">SLAM</a></strong> (Simultaneous Localization and Mapping). Most techniques in semantic SLAM simply augment a map with semantic information. In earlier works, keypoints extracted within object detection bounding boxes are used to introduce physical constraints during SLAM. Knowledge of recognized objects can be used to introduce <strong>semantic priors</strong> (eg: A tree should be vertically oriented, the trunk should always touch the ground). Many approaches also predict 3D structures that are not fully visible, by using known shapes of common objects. This helps the robot predict occluded structures and  free-spaces. Recent approaches go further by taking into account factors such as the movability, flexibility, allowed degrees of freedom and expected behaviour of known objects. Applications of these are commonly seen in self-driving cars. Here, objects like road signs, cars, signals, etc. are tracked, and known behaviours of vehicles, pedestrians, etc. are used for making predictions.</p>
 <hr>
 <!--Tesla & Desk-->
-<figure>
-    <img src="/blog/img/semantic_scene/semantic_slam.png"
-         alt="Semantic SLAM - How Tesla Autopilot sees the world (left) and augmenting SLAM with object information (right)"/> <figcaption>
+<figure><img src="/blog/img/semantic_scene/semantic_slam.png"
+         alt="Semantic SLAM - How Tesla Autopilot sees the world (left) and augmenting SLAM with object information (right)"/><figcaption>
             <p><strong>Semantic SLAM</strong> - How Tesla Autopilot sees the world (left) and augmenting SLAM with object information (right)</p>
         </figcaption>
 </figure>
@@ -292,9 +285,8 @@
 <p>Moving beyond simply <em>recognizing</em> context, robots also need to know how to <em>use</em> this context. An interesting way to tackle this is through the use of <strong>description sections</strong>. These are sections in the robot&rsquo;s memory that would contain rules for logical inference, Bayesian predictions, heuristics, etc. There also exist algorithms that convert <a href="https://en.wikipedia.org/wiki/Linear_temporal_logic">linear &amp; temporal logic</a> from these descriptive rules to controllers that can directly be used on robots.</p>
 <p>Another effective way to introduce logical reasoning in robots is by storing knowledge in an <strong>ontological structure</strong>. This is a graph that provides the robot information about <em>what the objects are, what they can be used for</em> and <em>how to use them</em> (See the figure below). Thus, by taking into account the semantics of objects, the robot can  choose appropriate behaviour based on the current situation.</p>
 <!--Ontology cup, kettle-->
-<figure>
-    <img src="/blog/img/semantic_scene/ontology.png"
-         alt="Ontological structures - Cropped diagram of a robot figuring out how to find a cup of tea"/> <figcaption>
+<figure><img src="/blog/img/semantic_scene/ontology.png"
+         alt="Ontological structures - Cropped diagram of a robot figuring out how to find a cup of tea"/><figcaption>
             <p><strong>Ontological structures</strong> - Cropped diagram of a robot figuring out how to find a cup of tea</p>
         </figcaption>
 </figure>
@@ -304,8 +296,7 @@
 <p>One area where machines  are getting better at gaining such an understanding is not in robotics, but in artificial <strong><a href="https://towardsdatascience.com/image-captioning-in-deep-learning-9cd23fb4d8d2">video/image captioning</a></strong> networks. The figure below shows an AI answering questions about an image. Such architectures generally consist of a CNN-based (Convolutional Neural Network) model for object recognition giving a feature vector. This feature vector is fed to an RNN (Recurrent Neural Network) that generates a sentence describing it. It would thus be a fair assumption that at an intermediate step of this process contains a significant level of semantic understanding, embedded in latent space.</p>
 <p>The second area of learning through observation is <strong>imitation learning</strong>. There exists research in this area that tries to solve the <strong>correspondence problem</strong>; i.e.: Humans and robots perceive and interact with the world in fundamentally different ways, so robots must <em>learn</em> the correspondence between the &lsquo;state spaces&rsquo; of humans and robots. This consists of establishing <strong>Perceptual equivalence</strong> (<em>What does an observation mean in robot-terms &amp; human-terms</em>) and <strong>physical equivalence</strong> <em>(How to achieve the same effect as the one observed)</em>.</p>
 <!--waiter pancakes-->
-<figure>
-    <img src="/blog/img/semantic_scene/captioning.png"/> 
+<figure><img src="/blog/img/semantic_scene/captioning.png"/>
 </figure>
 
 <h2 id="general-intelligence--artificial-conscience">General Intelligence &amp; Artificial Conscience</h2>
@@ -389,22 +380,25 @@
     
       <section id="categories">
         <header>
-          <h1><a href="/blog/categories">categories</a></h1>
+          <h1><a href="/blog/categories">Categories</a></h1>
         </header>
         <ul>
           
           
           <li>
-              <a href="/blog/categories/ai/">ai<span class="count">3</span></a>
+              <a href="/blog/categories/ai/">ai<span class="count">4</span></a>
           
           <li>
-              <a href="/blog/categories/automation/">automation<span class="count">3</span></a>
+              <a href="/blog/categories/automation/">automation<span class="count">4</span></a>
           
           <li>
               <a href="/blog/categories/innovation/">innovation<span class="count">2</span></a>
           
           <li>
               <a href="/blog/categories/mechanical/">mechanical<span class="count">2</span></a>
+          
+          <li>
+              <a href="/blog/categories/behavious-based-robotics/">behavious-based-robotics<span class="count">1</span></a>
           
           <li>
               <a href="/blog/categories/computer-vision/">computer-vision<span class="count">1</span></a>
@@ -420,6 +414,9 @@
           
           <li>
               <a href="/blog/categories/path-planning/">path-planning<span class="count">1</span></a>
+          
+          <li>
+              <a href="/blog/categories/robotics/">robotics<span class="count">1</span></a>
           
           </li>
         </ul>
@@ -481,16 +478,16 @@
       </ul>
   
   <p class="copyright">
-    © 2021 The ERC Blog
+    © 2022 The ERC Blog
       <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.75.1' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.92.2' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
 
       <script src="/blog/js/highlight.js"></script>
     
-    <script>hljs.initHighlightingOnLoad();</script><script src="/blog/js/bundle.min.91795bce3029963d71f84e74f8a83d48ab2cdf260e3db7ecf63d3294c95674c7.js" integrity="sha256-kXlbzjAplj1x&#43;E50&#43;Kg9SKss3yYOPbfs9j0ylMlWdMc="></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/blog/js/bundle.min.fcf0117a795f43011381c1b622ca2f4fdd4a1ab769d6d0b3a03e11cee95098fd.js" integrity="sha256-/PARenlfQwETgcG2IsovT91KGrdp1tCzoD4RzulQmP0="></script>
     <script src="/blog/js/add-on.js"></script>
 <script type="application/javascript">
 var doNotTrack = false;
