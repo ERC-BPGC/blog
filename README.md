@@ -31,7 +31,13 @@ Requirements: git, ruby, gem, jekyll
 
 ## Running Local Host Server
 
-1. Build the blog: Run in root directory of the repository
+1. Build the blog  
+
+   ```shell
+   hugo
+   ```
+
+2. Build the blog: Run in root directory of the repository
 
    ```shell
    hugo server
@@ -65,3 +71,5 @@ Output:
     '''
 
 Copy the Link given into your browser.
+
+Note: Whenever pushing any changes to the blog, make sure to build the blog (Step 1) and then run the server (Step 2).
