@@ -12,7 +12,7 @@ Requirements: git, ruby, gem, jekyll
 
    ```shell
    powershell
-    iex <new-object net.webclient>.downloadstring<'https://get.scoop.sh'>
+   iex <new-object net.webclient>.downloadstring<'https://get.scoop.sh'>
    ```
 
 2. Install Curl: A command line tool for transferring data with URL syntax.
