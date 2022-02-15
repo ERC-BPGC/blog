@@ -38,21 +38,7 @@ Requirements: git, ruby, gem, jekyll
    ```
 
 Output:  
-    '''shell  
-    Start building sites …
-    hugo v0.92.2-CDF6A0D6 windows/amd64 BuildDate=2022-02-11T14:17:39Z VendorInfo=gohugoio
-    WARN 2022/02/15 12:31:40 The google_news internal template will be removed in a future release. Please remove calls to this template. See            <https://github.com/gohugoio/hugo/issues/9172> for additional information.
-                    | EN
-    -------------------+-----
-    Pages            | 42
-    Paginator pages  |  0
-    Non-page files   |  0
-    Static files     | 88
-    Processed images |  0
-    Aliases          | 13
-    Sitemaps         |  1
-    Cleaned          |  0
-
+    '''shell 
     Built in 119 ms
     Watching for changes in C:\Users\<usr>\blog\{archetypes,content,data,layouts,static,themes}
     Watching for config changes in C:\Users\<usr>\blog\config.toml
