@@ -31,13 +31,13 @@ Requirements: git, ruby, gem, jekyll
 
 ## Running Local Host Server
 
-1. Build the blog  
+1. Build the blog: Run in root directory of the repository
 
    ```shell
    hugo
    ```
 
-2. Build the blog: Run in root directory of the repository
+2. Run the local host: Run in root directory of the repository
 
    ```shell
    hugo server
