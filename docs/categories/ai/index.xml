@@ -6,7 +6,18 @@
     <description>Recent content in ai on The ERC Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 01 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://erc-bpgc.github.io/blog/categories/ai/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 14 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://erc-bpgc.github.io/blog/categories/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Behaviour Based Robotics</title>
+      <link>https://erc-bpgc.github.io/blog/blog/bbr/</link>
+      <pubDate>Mon, 14 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://erc-bpgc.github.io/blog/blog/bbr/</guid>
+      <description>Have you ever wondered why we humans survived the race of evolution amongst all the other creatures that inhabited Earth millions of years ago?
+It is because of our intelligence and ability to acclimatize to a changing environment. Similarly, the idea of robots operating in response to their environment was proposed in the late eighties. This was known as Behavior-Oriented Artificial Intelligence.
+In that era, robots were designed to do labor-intensive tasks and the term artificial intelligence was limited to robots executing specific sets of instructions on their own which were already fed to their system at the time of design which was previously known as ‘classical AI’.</description>
+    </item>
+    
     <item>
       <title>Model Predictive Control</title>
       <link>https://erc-bpgc.github.io/blog/blog/model_predictive_control/</link>
@@ -14,7 +25,7 @@
       
       <guid>https://erc-bpgc.github.io/blog/blog/model_predictive_control/</guid>
       <description>The below animation depicts a Model Predictive Control on a dynamic four-legged robot by Yanran Ding.
-  RF-MPC on a Qadruped
+ RF-MPC on a Qadruped
   Over the years, the advancement in robotics and related areas has allowed robot models to have complex and non-linear dynamic equations. The application of such robots involves dynamic environments or environments which are highly inaccessible to humans. Such robot models introduced new challenges in the control strategies as typical industrial controllers such as PID controllers can fail in guaranteeing many features in these areas.</description>
     </item>
     

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>robotics on The ERC Blog</title>
+    <link>https://erc-bpgc.github.io/blog/categories/robotics/</link>
+    <description>Recent content in robotics on The ERC Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 14 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://erc-bpgc.github.io/blog/categories/robotics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Behaviour Based Robotics</title>
+      <link>https://erc-bpgc.github.io/blog/blog/bbr/</link>
+      <pubDate>Mon, 14 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://erc-bpgc.github.io/blog/blog/bbr/</guid>
+      <description>Have you ever wondered why we humans survived the race of evolution amongst all the other creatures that inhabited Earth millions of years ago?
+It is because of our intelligence and ability to acclimatize to a changing environment. Similarly, the idea of robots operating in response to their environment was proposed in the late eighties. This was known as Behavior-Oriented Artificial Intelligence.
+In that era, robots were designed to do labor-intensive tasks and the term artificial intelligence was limited to robots executing specific sets of instructions on their own which were already fed to their system at the time of design which was previously known as ‘classical AI’.</description>
+    </item>
+    
+  </channel>
+</rss>

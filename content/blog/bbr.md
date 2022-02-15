@@ -59,13 +59,14 @@ Biologically inspired robots with a structure resembling fish for aquatic locomo
 Snake-bot for limbless locomotion and six-legged hexapod robot inspired from cockroach locomotion.
 
 <!--Sojourner-->
-{{< figure src="/blog/img/bbr/sojourner.gif" caption = "Behavior-based Mars Rover ‘Sojourner’">}}
+{{< figure src="/blog/img/bbr/sojourner.gif" >}}
 
 Behavior-based Mars Rover ‘Sojourner’
 Currently, research is going on to develop fully autonomous robots and extend the intelligence of these robots to the intelligence of the human brain.
 
 <!--Nasa-->
-{{< figure src="/blog/img/bbr/nasa.gif" caption = "Nasa aims to develop such robots having human-like intelligence for futuristic space missions">}}
+{{< figure src="/blog/img/bbr/nasa.gif">}}
+Nasa aims to develop such robots having human-like intelligence for futuristic space missions
 
 Some disadvantages or inefficiencies associated with BBR:
 

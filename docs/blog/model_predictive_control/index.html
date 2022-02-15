@@ -18,30 +18,24 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.75.1" /><meta itemprop="name" content="Model Predictive Control">
-<meta itemprop="description" content="The article talks about Model Predictive Control and its numerous application in industries and robotics and describes a few variants of Model Predictive Control developed recently.">
-<meta itemprop="datePublished" content="2021-05-01T00:00:00+00:00" />
+<meta name="generator" content="Hugo 0.92.2" /><meta itemprop="name" content="Model Predictive Control">
+<meta itemprop="description" content="The article talks about Model Predictive Control and its numerous application in industries and robotics and describes a few variants of Model Predictive Control developed recently."><meta itemprop="datePublished" content="2021-05-01T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2021-05-01T00:00:00+00:00" />
-<meta itemprop="wordCount" content="1254">
-<meta itemprop="image" content="">
-
-
-
-<meta itemprop="keywords" content="" />
-<meta property="og:title" content="Model Predictive Control" />
+<meta itemprop="wordCount" content="1254"><meta itemprop="image" content="">
+<meta itemprop="keywords" content="" /><meta property="og:title" content="Model Predictive Control" />
 <meta property="og:description" content="The article talks about Model Predictive Control and its numerous application in industries and robotics and describes a few variants of Model Predictive Control developed recently." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://erc-bpgc.github.io/blog/blog/model_predictive_control/" />
-<meta property="og:image" content="" />
+<meta property="og:url" content="https://erc-bpgc.github.io/blog/blog/model_predictive_control/" /><meta property="og:image" content="" /><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2021-05-01T00:00:00+00:00" />
 <meta property="article:modified_time" content="2021-05-01T00:00:00+00:00" />
+
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content=""/>
 
 <meta name="twitter:title" content="Model Predictive Control"/>
 <meta name="twitter:description" content="The article talks about Model Predictive Control and its numerous application in industries and robotics and describes a few variants of Model Predictive Control developed recently."/>
 <meta name="twitter:site" content="@erc_bpgc?s=12"/>
-<link rel="stylesheet" href="/blog/css/bundle.min.d9e04ae08c9b3049b766dbd4aeab7d862c5ea1d13679b621490e0f5df5507497.css" integrity="sha256-2eBK4IybMEm3ZtvUrqt9hixeodE2ebYhSQ4PXfVQdJc="><link disabled=true id="dark-mode-theme" rel="stylesheet" href="/blog/css/add-on.css">
+<link rel="stylesheet" href="/blog/css/bundle.min.6ad9eb85bff384c75937a02036b01425a2ca63f19a96535b8ba5b181db62a4b3.css" integrity="sha256-atnrhb/zhMdZN6AgNrAUJaLKY/GallNbi6WxgdtipLM="><link disabled=true id="dark-mode-theme" rel="stylesheet" href="/blog/css/add-on.css">
         <link rel="stylesheet" href="/blog/css/add-on1.css">
   </head>
 
@@ -273,18 +267,16 @@
       <!--Image folder complete location "blog/static/img"-->
 <p>The below animation depicts a Model Predictive Control on a dynamic four-legged robot by <a href="https://github.com/YanranDing/RF-MPC">Yanran Ding</a>.</p>
 <!--RF-MPC gif-->
-<figure>
-    <img src="/blog/img/model_predictive_control/rf-mpc.gif"
-         alt="RF-MPC on a Qadruped"/> <figcaption>
+<figure><img src="/blog/img/model_predictive_control/rf-mpc.gif"
+         alt="RF-MPC on a Qadruped"/><figcaption>
             <p>RF-MPC on a Qadruped</p>
         </figcaption>
 </figure>
 
 <p>Over the years, the advancement in robotics and related areas has allowed robot models to have complex and non-linear dynamic equations. The application of such robots involves dynamic environments or environments which are highly inaccessible to humans. Such robot models introduced new challenges in the control strategies as typical industrial controllers such as PID controllers can fail in guaranteeing many features in these areas. These new challenges lead to extensive research to develop optimal control strategies to satisfy the needs of different applications. One such strategy developed by researchers is Model Predictive Control (MPC).</p>
 <!--Basic concept-->
-<figure>
-    <img src="/blog/img/model_predictive_control/basic_concept.png"
-         alt="The basic concept of Model Predictive Control as a model-based and optimization-based solution."/> <figcaption>
+<figure><img src="/blog/img/model_predictive_control/basic_concept.png"
+         alt="The basic concept of Model Predictive Control as a model-based and optimization-based solution."/><figcaption>
             <p>The basic concept of Model Predictive Control as a model-based and optimization-based solution.</p>
         </figcaption>
 </figure>
@@ -292,9 +284,8 @@
 <p>One of the first-ever applications of MPC was in chemical plants to control the transients of dynamic systems with hundreds of inputs and outputs, subject to constraint. But MPC has come a long way since then, with its application covering many fields and significant improvement in its technical capabilities.</p>
 <p>Imagine walking in a dark room; we first try to sense our surroundings, then based on that, we try to predict the best path towards our goal, and finally, we take only one step on that path and then repeat this entire cycle. MPC also works on a very similar line of reasoning. The essence of MPC is to optimize the manipulatable inputs and the forecasts of process behavior. If we have a reasonably accurate dynamic model of a system, we can use this model and current measurements to predict the future outputs of the system. We can then make the appropriate changes in the input variable based on these predictions.</p>
 <!--Block Diagram-->
-<figure>
-    <img src="/blog/img/model_predictive_control/block_diagram.png"
-         alt="Block diagram of model predictive control"/> <figcaption>
+<figure><img src="/blog/img/model_predictive_control/block_diagram.png"
+         alt="Block diagram of model predictive control"/><figcaption>
             <p>Block diagram of model predictive control</p>
         </figcaption>
 </figure>
@@ -302,9 +293,8 @@
 <p>At each timestep, MPC solves an open-loop optimization problem for the prediction horizon to compute control. The <strong>prediction horizon</strong> decides how far in the future should the model predict the state of the system. The sequence of control moves calculated by the model corresponding to these predictions is called the <strong>control horizon</strong>. Even though a sequence of multiple control moves is calculated at each sampling instant, only the first move is implemented on the system. This is the reason why MPC is also called <strong>receding horizon control</strong>. After this, a new sequence is calculated for the next sampling instant, after the latest measurements become available, and again only the first input move is implemented.</p>
 <p>One obvious question that arises in mind is why we are calculating a sequence of multiple inputs if we are applying only the first input? A significant benefit of MPC arises from determining the optimal operating conditions (setpoints) and moving the process to these set points in an optimal manner based on the control calculations. By applying only the first input and recalculating the control moves based on new predictions, we ensure that all inputs are based on the optimal operating conditions, irrespective of how our system parameters are changing with time.</p>
 <!--Illustration graph-->
-<figure>
-    <img src="/blog/img/model_predictive_control/mpc_graph.png"
-         alt="Illustration of the basic concept of model predictive control"/> <figcaption>
+<figure><img src="/blog/img/model_predictive_control/mpc_graph.png"
+         alt="Illustration of the basic concept of model predictive control"/><figcaption>
             <p>Illustration of the basic concept of model predictive control</p>
         </figcaption>
 </figure>
@@ -313,18 +303,16 @@
 <p>Another critical benefit of MPC is its ability to handle inequality constraints. Inequality constraints were a primary motivation for the early development of MPC. Input constraints occur due to physical limitations on the system such as motors, pumps, etc.</p>
 <p>MPC can explicitly handle constraints on both input and output because of its approach of solving open-loop optimization problems for the cost function, which can be solved easily subjected to given constraints. The nature of the optimization problem in linear MPC is a convex function, i.e. the polygon area over which optimization occurs are convex polygons. These problems are commonly referred to as Convex <strong>Quadratic Program (QP)</strong>.</p>
 <!--Convex & Non-Convex Polygons-->
-<figure>
-    <img src="/blog/img/model_predictive_control/polygons.png"
-         alt="Convex and Non-Convex polygons"/> <figcaption>
+<figure><img src="/blog/img/model_predictive_control/polygons.png"
+         alt="Convex and Non-Convex polygons"/><figcaption>
             <p>Convex and Non-Convex polygons</p>
         </figcaption>
 </figure>
 
 <p>The optimization problem commonly used in MPC is the <strong>finite-time optimal control problem (FTOCP)</strong>, i.e. the cost function is optimized for a finite horizon by imposing a terminal constraint.</p>
 <!--Cost Function-->
-<figure>
-    <img src="/blog/img/model_predictive_control/cost_function.png"
-         alt="Cost function optimization subjected to inequality constraints for MPC"/> <figcaption>
+<figure><img src="/blog/img/model_predictive_control/cost_function.png"
+         alt="Cost function optimization subjected to inequality constraints for MPC"/><figcaption>
             <p>Cost function optimization subjected to inequality constraints for MPC</p>
         </figcaption>
 </figure>
@@ -333,9 +321,8 @@
 <p>If we think about the quadruped simulation (RF-MPC on quadruped) we saw above, we can understand why MPC  is a popular choice for such systems. Designing and controlling a legged robot requires the control design to use its inherent dynamics while dealing with constraints due to hardware limitations and interactions with the environment, which are some of the significant benefits of MPC. The movement of legged robots mainly involves controlling the joint angles of the legs. The inputs given to motors present at these joints must be strictly within a specific range as any arbitrary movement of legs can lead to damage to the robot. In legged robots, multiple variables are required to be controlled, such as joint angles, CoM of the robot, the robot&rsquo;s velocity, the velocity of the end effectors etc., which can be handled conveniently by MPC by designing a multi-variable cost function.</p>
 <p>Some of the popular robots that use MPC are <a href="https://rsl.ethz.ch/robots-media/anymal.html">ANYmal</a> by ETH Zurich, <a href="https://www.bostondynamics.com/atlas">Atlas</a> by Boston Dynamics and <a href="https://biomimetics.mit.edu/">MIT Cheetah</a>.</p>
 <!--ANYmal-->
-<figure>
-    <img src="/blog/img/model_predictive_control/anymal.png"
-         alt="ANYmal by ETH Zurich"/> <figcaption>
+<figure><img src="/blog/img/model_predictive_control/anymal.png"
+         alt="ANYmal by ETH Zurich"/><figcaption>
             <p>ANYmal by ETH Zurich</p>
         </figcaption>
 </figure>
@@ -343,18 +330,16 @@
 <h2 id="variants-of-mpc">Variants of MPC</h2>
 <p><strong>Non-Linear MPC:</strong> Nonlinear Model Predictive Control, or NMPC, is a variant of model MPC, characterized by non-linear system models. NMPC also requires the iterative solution of optimal control problems on a finite prediction horizon as in linear MPC. While these problems are convex in linear MPC, in non-linear MPC, they are not necessarily convex anymore.</p>
 <!--Block Diagram Non-Linear-->
-<figure>
-    <img src="/blog/img/model_predictive_control/block_diagram_nl.png"
-         alt="Block diagram of non-linear MPC"/> <figcaption>
+<figure><img src="/blog/img/model_predictive_control/block_diagram_nl.png"
+         alt="Block diagram of non-linear MPC"/><figcaption>
             <p>Block diagram of non-linear MPC</p>
         </figcaption>
 </figure>
 
 <p><strong>Explicit MPC:</strong> Explicit MPC (eMPC) allows fast evaluation of the control law for some systems, in stark contrast to the online MPC. Explicit MPC is based on the parametric programming technique (optimization problem is solved as a function of multiple parameters). The solution to the MPC control problem formulated as an optimization problem is pre-computed offline. This offline solution, i.e. the control law, is often in the form of a piecewise affine function (PWA).</p>
 <!--Explicit MPC-->
-<figure>
-    <img src="/blog/img/model_predictive_control/empc.png"
-         alt="eMPC of LPV system in controllable canonical form"/> <figcaption>
+<figure><img src="/blog/img/model_predictive_control/empc.png"
+         alt="eMPC of LPV system in controllable canonical form"/><figcaption>
             <p>eMPC of LPV system in controllable canonical form</p>
         </figcaption>
 </figure>
@@ -411,6 +396,8 @@
   
   <div class="pagination">
     
+      <a href="/blog/blog/bbr/" class="button left"><span>Behaviour Based Robotics</span></a>
+    
     
       <a href="/blog/blog/heuristically_guided_sampling_based_path_planning/" class="button right"><span>Heuristically guided Sampling based Path Planning</span></a>
     
@@ -426,22 +413,25 @@
     
       <section id="categories">
         <header>
-          <h1><a href="/blog/categories">categories</a></h1>
+          <h1><a href="/blog/categories">Categories</a></h1>
         </header>
         <ul>
           
           
           <li>
-              <a href="/blog/categories/ai/">ai<span class="count">3</span></a>
+              <a href="/blog/categories/ai/">ai<span class="count">4</span></a>
           
           <li>
-              <a href="/blog/categories/automation/">automation<span class="count">3</span></a>
+              <a href="/blog/categories/automation/">automation<span class="count">4</span></a>
           
           <li>
               <a href="/blog/categories/innovation/">innovation<span class="count">2</span></a>
           
           <li>
               <a href="/blog/categories/mechanical/">mechanical<span class="count">2</span></a>
+          
+          <li>
+              <a href="/blog/categories/behavious-based-robotics/">behavious-based-robotics<span class="count">1</span></a>
           
           <li>
               <a href="/blog/categories/computer-vision/">computer-vision<span class="count">1</span></a>
@@ -457,6 +447,9 @@
           
           <li>
               <a href="/blog/categories/path-planning/">path-planning<span class="count">1</span></a>
+          
+          <li>
+              <a href="/blog/categories/robotics/">robotics<span class="count">1</span></a>
           
           </li>
         </ul>
@@ -518,16 +511,16 @@
       </ul>
   
   <p class="copyright">
-    © 2021 The ERC Blog
+    © 2022 The ERC Blog
       <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.75.1' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.92.2' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
 
       <script src="/blog/js/highlight.js"></script>
     
-    <script>hljs.initHighlightingOnLoad();</script><script src="/blog/js/bundle.min.91795bce3029963d71f84e74f8a83d48ab2cdf260e3db7ecf63d3294c95674c7.js" integrity="sha256-kXlbzjAplj1x&#43;E50&#43;Kg9SKss3yYOPbfs9j0ylMlWdMc="></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/blog/js/bundle.min.fcf0117a795f43011381c1b622ca2f4fdd4a1ab769d6d0b3a03e11cee95098fd.js" integrity="sha256-/PARenlfQwETgcG2IsovT91KGrdp1tCzoD4RzulQmP0="></script>
     <script src="/blog/js/add-on.js"></script>
 <script type="application/javascript">
 var doNotTrack = false;
